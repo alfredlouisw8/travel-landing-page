@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -29,15 +28,17 @@ const Navigation = () => {
                     <img src={Logo} className="logo" alt="AKO MAG." />
                     <Row className="items g-0 mt-2 mt-md-3 ">
                       <Col className="itemLink">
-                        <Link to="#">いこう.</Link>
+                        <a target={'_blank'} href="https://ako-mag.jp/#sec-sightseeing" rel="noreferrer">いこう.</a>
                       </Col>
                       <Col className="itemLink gray">かおう.</Col>
                       <Col className="itemLink">
-                        <Link to="#">すもう.</Link>
+                        <a target={'_blank'} href="https://ako-mag.jp/#sec-live" rel="noreferrer">すもう.</a>
                       </Col>
-                      <Col className="itemLink gray">お便り.</Col>
                       <Col className="itemLink">
-                        <a href="https://ako-mag.jp/about/">わたしたち.</a>
+                        <a target={'_blank'} href="https://ako-mag.jp/letters/" rel="noreferrer">お便り.</a>
+                      </Col>
+                      <Col className="itemLink">
+                        <a target={'_blank'} href="https://ako-mag.jp/about/" rel="noreferrer">わたしたち.</a>
                       </Col>
                     </Row>
                   </div>

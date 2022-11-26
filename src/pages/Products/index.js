@@ -68,19 +68,25 @@ const Products = () => {
 
 
   const productsRequest = bodyRequest;
-
-  productsRequest.request.Language = `${language}-JP`;
+  const langParams = searchParams.get("lang");
 
   useEffect(() => {
+
     searchParams.delete("pages");
     searchParams.delete("pages_request");
     setSearchParams(searchParams);
 
     setPage(1);
-    productsRequest.request.Paging.PageNumber = 1;
-  }, []);
 
-  useEffect(() => {
+    productsRequest.request.Availability = {
+      MergeMethod: 1,
+      Window: {
+        Size: 42,
+        StartDate: new Date(),
+      },
+    };
+
+    productsRequest.request.Paging.PageNumber = 1;
     const category = searchParams.get("category");
 
     if (category && category !== "all") {
@@ -88,22 +94,77 @@ const Products = () => {
         IndustryCategoryGroups: [category],
       };
       setSelectedCategory(category);
-      getData();
     }
+    const min = searchParams.get("min");
+    const max = searchParams.get("max");
+    const keyword = searchParams.get("keyword");
+    const date = searchParams.get("date");
+    const sort = searchParams.get("sort");
+
+    if (min || max) {
+      productsRequest.request.Filter.Bookability.RateRange = {
+        Min: min,
+        Max: max,
+      };
+      setPriceRange(`${min}-${max}`);
+    }
+
+    if (date) {
+      productsRequest.request.Availability.Window.StartDate = new Date(date);
+      setDate(new Date(date));
+    }
+
+    if (keyword) {
+      productsRequest.request.Filter.Names = [`%${keyword}%`];
+      setKeyword(keyword);
+    }
+
+    if (selectedKeyword) {
+      productsRequest.request.Filter.Names = [`%${selectedKeyword}%`];
+    }
+
+    if (sort) {
+      setSelectedOption(sort);
+      productsRequest.request.Sorting = [
+        {
+          By: `${sort.split("-")[0]}`,
+          Direction: `${sort.split("-")[1]}`,
+        },
+      ];
+    } else {
+      productsRequest.request.Sorting = [
+        {
+          By: "Name",
+          Direction: "Ascending",
+          PositionOfNull: "PreferenceBottom",
+        },
+      ];
+    }
+
+    delete productsRequest.request.Filter.Ids;
+
+    productsRequest.request.Language = `${language === "en" ? "en-US" : "jp-JP"
+      }`;
+
+    getData();
   }, []);
 
   useEffect(() => {
-    delete productsRequest.request.Filter.Ids;
+    productsRequest.request.Language = `${language === "en" ? "en-US" : "jp-JP"
+      }`;
 
-    productsRequest.request.Sorting = [
-      {
-        By: "Name",
-        Direction: "Ascending",
-        PositionOfNull: "PreferenceBottom",
-      },
-    ];
-    getData();
+    if (langParams === language) {
+      pageNames();
+      getData();
+      window.scrollTo(0, 0);
+    }
   }, [language]);
+
+  const resetPage = () => {
+    setPage(1);
+    searchParams.delete('pages');
+    setToken(null);
+  }
 
   useEffect(() => {
     stateServices &&
@@ -116,6 +177,8 @@ const Products = () => {
 
   const dispatchQuick = (page) => {
     productsRequest.request.ShortName = distributorQuick;
+    productsRequest.request.Paging.PageNumber = page || 1;
+    productsRequest.request.Paging.PageSize = 12;
 
     axios.post(endpoints.search, productsRequest).then((response) => {
       if (page && page > 1) {
@@ -165,14 +228,6 @@ const Products = () => {
   const getData = (payload) => {
     setSkeletonShow("block");
 
-    productsRequest.request.Availability = {
-      MergeMethod: 1,
-      Window: {
-        Size: 42,
-        StartDate: new Date(),
-      },
-    };
-
     if (payload?.page && payload?.page > 1) {
       productsRequest.request.Paging.PageNumber = payload?.page;
       searchParams.get("page", page);
@@ -189,6 +244,11 @@ const Products = () => {
   };
 
   const filterData = (values) => {
+    resetPage();
+    productsRequest.request.Filter = {
+      Type: 'Service',
+      TagCriteria: {}
+    }
     if (values.minRange) {
       if (values.minRange === "0") {
         productsRequest.request.Filter.Bookability.RateRange = {};
@@ -205,8 +265,19 @@ const Products = () => {
     }
 
     if (values.date) {
-      productsRequest.request.Availability.Window.StartDate = values.date;
-      searchParams.set("date", values.date);
+      productsRequest.request.Availability.Window.StartDate = new Date(
+        values.date
+      );
+      if (moment(values.date).format("LL") !== moment().format("LL")) {
+        searchParams.set(
+          "date",
+          moment(new Date(values.date)).format("YYYY-MM-DD")
+        );
+      } else {
+        searchParams.delete("date");
+      }
+    } else {
+      searchParams.delete("date");
     }
 
     if (values.category === "all") {
@@ -230,6 +301,12 @@ const Products = () => {
     setSearchParams(searchParams);
 
     getData();
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
   };
 
   const changeToRequest = () => {
@@ -250,6 +327,7 @@ const Products = () => {
   };
 
   const onSort = (value) => {
+    resetPage();
     setSelectedOption(value);
     productsRequest.request.Sorting = [
       {
@@ -257,6 +335,8 @@ const Products = () => {
         Direction: `${value.split("-")[1]}`,
       },
     ];
+    searchParams.set("sort", value);
+    setSearchParams(searchParams);
     getData();
   };
 
