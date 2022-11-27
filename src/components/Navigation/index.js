@@ -9,9 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Logo from "../../assets/images/logo.svg";
-import Img from "../../assets/images/nav-image.webp";
-import ImgLg from "../../assets/images/nav-image-lg.webp";
-import Img2 from "../../assets/images/nav-image-2.webp";
+import Img from "../../assets/images/nav-image-au.webp";
+import ImgLg from "../../assets/images/nav-image-au.webp";
+import Img2 from "../../assets/images/nav-image-2-au.webp";
 
 import "./style.scss";
 
@@ -22,7 +22,7 @@ const Navigation = () => {
         <div className="container-fluid">
           <Row>
             <Col className="navLeft" xs={9} sm={5} md={"auto"}>
-              <div className="ms-0 ms-lg-3">
+              <div className="ms-0">
                 <div className="leftTop">
                   <div className="position-sticky">
                     <img src={Logo} className="logo" alt="AKO MAG." />
@@ -57,14 +57,16 @@ const Navigation = () => {
             <Col xs={9} sm={5} md={"auto"} className="navRight">
               <Row className="align-items-end ">
                 <Col sm={7} md>
-                  <div className="textSkew">冬のイチオシ</div>
+                  <div className="textSkew">秋のイチオシ</div>
                   <div className="navImages">
                     <div className="topRight">
                       <h1>
-                        <span>赤穂の冬は､ </span> <br /> 牡蠣小屋と温泉♨️
+                        <span>赤穂の秋は､</span> <br />
+                        コスモス畑で🚴🚴‍♀️
                       </h1>
                       <p className="mt-2">
-                        瀬戸内海が育む牡蠣と <br /> 絶景温泉を堪能
+                        紅葉で秋を感じながら <br />
+                        街中のカフェ巡り
                       </p>
                     </div>
                     <picture className="image">
@@ -90,16 +92,16 @@ const Navigation = () => {
                     </Col>
                     <Col xs={7} sm={12} className="textDesc d-flex flex-column">
                       <div className="d-inline-block mt-2 mt-md-4">
-                        ｢夕日眺めながらの牡蠣小屋｣
+                        ｢見応え抜群！有年コスモス畑｣
                       </div>
                       <div className="text-end d-inline-block mt-2 mt-md-4">
-                        ｢牡蠣汁...ジュワあつあつ｣
+                        ｢登山道を彩る紅葉｣
                       </div>
                       <div className="d-inline-block mt-2 mt-md-4">
-                        ｢贅沢な心地よ...｣
+                        ｢気軽にトレッキング⛰🥾｣
                       </div>
                       <div className="text-end d-inline-block mt-2 mt-md-4">
-                        ｢うむ...良きかな赤穂｣
+                        ｢うむ…良きかな赤穂｣
                       </div>
                     </Col>
                   </Row>
@@ -116,7 +118,7 @@ const Navigation = () => {
                           <div className="linkIcon col-auto px-1">
                             <FontAwesomeIcon icon={faMapMarkerAlt} />
                           </div>
-                          <div className="f-11px col-auto px-1">
+                          <div className="linkRight col-auto px-1">
                             牡蠣小屋 りょうちゃん <br />
                             <small>
                               Google maps &nbsp;
@@ -137,7 +139,7 @@ const Navigation = () => {
                           <div className="linkIcon col-auto px-1">
                             <FontAwesomeIcon icon={faSuitcaseRolling} />
                           </div>
-                          <div className="f-11px col-auto px-1">
+                          <div className="linkRight col-auto px-1">
                             [観光]ほかる赤穂 <br />
                             <small>
                               Website &nbsp;
