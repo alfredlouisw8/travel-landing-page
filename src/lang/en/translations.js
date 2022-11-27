@@ -93,5 +93,20 @@ export const TRANSLATIONS_EN = {
   not_available_goods: "Not Available",
   price_tax: "Price (tax incl.)",
   date_placeholder: "dd/mm/yy",
-  reset_filter: 'Reset Filter'
+  reset_filter: 'Reset Filter',
+  shopping: "Shopping",
+  item_added: "Item added to cart",
+  warning_dist:
+    "Please finish your purchase before adding items from another distributor",
+  clear_date: "Clear Date",
+  adults: "Adults",
+  seniors: "Seniors",
+  children: "Children",
+  duration: "Duration",
+  adults_count: "Adults: {{ adults }}",
+  seniors_count: "Seniors : {{ seniors }}",
+  children_count: "Children : {{ children }}",
+  check_in_date: "Check In: {{ date }}",
+  check_out_date: "Check Out: {{ date }}",
+  estimated: "Estimated",
 };

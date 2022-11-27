@@ -13,14 +13,19 @@ import "./App.scss";
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("jp");
   const [searchParams, setSearchParams] = useSearchParams();
-  const [langSelected, setLangSelected] = useState();
+  const langParams = searchParams.get("lang");
 
   useEffect(() => {
-    const lang = i18n.language;
-    setLangSelected(lang);
-  }, [searchParams]);
+    i18n.changeLanguage("jp");
+  }, []);
+
+  useEffect(() => {
+    if (langParams && langParams !== language) {
+      setLanguage(langParams);
+    }
+  }, [langParams]);
 
   const handleOnclick = (e) => {
     e.preventDefault();
@@ -37,14 +42,14 @@ function App() {
         <div className="content">
           <FontAwesomeIcon icon={faLanguage} />
           <button
-            className={`btn ${langSelected === "en" ? "active" : ""}`}
+            className={`btn ${language === "en" ? "active" : ""}`}
             value="en"
             onClick={handleOnclick}
           >
             English
           </button>
           <button
-            className={`btn ${langSelected === "jp" ? "active" : ""}`}
+            className={`btn ${language === "jp" ? "active" : ""}`}
             value="jp"
             onClick={handleOnclick}
           >

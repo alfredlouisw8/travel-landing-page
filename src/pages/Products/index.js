@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import moment from 'moment';
 import { Form, Button } from "react-bootstrap";
 import {
   useNavigate,
@@ -61,6 +62,7 @@ const Products = () => {
   const [pageRequest, setPageRequest] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
   const [totalPageOnRequest, setTotalPageOnRequest] = useState(1);
+  const [token, setToken] = useState();
 
   const [selectedOption, setSelectedOption] = useState(options[0].value);
 
@@ -74,12 +76,7 @@ const Products = () => {
   const langParams = searchParams.get("lang");
 
   useEffect(() => {
-
-    searchParams.delete("pages");
-    searchParams.delete("pages_request");
-    setSearchParams(searchParams);
-
-    setPage(1);
+    resetPage();
 
     productsRequest.request.Availability = {
       MergeMethod: 1,
@@ -89,24 +86,19 @@ const Products = () => {
       },
     };
 
-    productsRequest.request.Paging.PageNumber = 1;
     const category = searchParams.get("category");
     const min = searchParams.get("min");
     const max = searchParams.get("max");
     const keyword = searchParams.get("keyword");
     const date = searchParams.get("date");
+    const sort = searchParams.get("sort");
 
     if (category && category !== "all") {
       productsRequest.request.Filter.TagCriteria = {
         IndustryCategoryGroups: [category],
       };
-      setSelectedCategory(category);
+      setCategory(category);
     }
-    const min = searchParams.get("min");
-    const max = searchParams.get("max");
-    const keyword = searchParams.get("keyword");
-    const date = searchParams.get("date");
-    const sort = searchParams.get("sort");
 
     if (min || max) {
       productsRequest.request.Filter.Bookability.RateRange = {
@@ -124,10 +116,6 @@ const Products = () => {
     if (keyword) {
       productsRequest.request.Filter.Names = [`%${keyword}%`];
       setKeyword(keyword);
-    }
-
-    if (selectedKeyword) {
-      productsRequest.request.Filter.Names = [`%${selectedKeyword}%`];
     }
 
     if (sort) {
@@ -161,16 +149,17 @@ const Products = () => {
       }`;
 
     if (langParams === language) {
-      pageNames();
       getData();
-      window.scrollTo(0, 0);
     }
   }, [language]);
 
   const resetPage = () => {
+    searchParams.delete("pages");
+    searchParams.delete("pages_request");
+    setSearchParams(searchParams);
     setPage(1);
-    searchParams.delete('pages');
     setToken(null);
+    productsRequest.request.Paging.PageNumber = 1;
   }
 
   useEffect(() => {
@@ -207,6 +196,7 @@ const Products = () => {
           ...response.data.Entities,
         ]);
         setTotalPage(response.data.Paging.NumberOfPages);
+        setToken(response.data.Paging.Token);
       }
       setProductsShow("block");
       setSkeletonShow("none");
@@ -241,6 +231,7 @@ const Products = () => {
 
     if (payload?.page && payload?.page > 1) {
       productsRequest.request.Paging.PageNumber = payload?.page;
+      productsRequest.request.Paging.Token = token;
       searchParams.get("page", page);
       dispatchQuick(payload?.page);
     } else if (payload?.pageRequest && payload?.pageRequest > 1) {
@@ -258,7 +249,10 @@ const Products = () => {
     resetPage();
     productsRequest.request.Filter = {
       Type: 'Service',
-      TagCriteria: {}
+      TagCriteria: {},
+      Bookability: {
+        RateRange: {},
+      }
     }
     if (values.minRange) {
       if (values.minRange === "0") {
@@ -312,18 +306,12 @@ const Products = () => {
     setSearchParams(searchParams);
 
     getData();
-
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
-    });
   };
 
-  const changeToRequest = () => {
-    setServices(onRequest);
-    setStateButton("request");
-  };
+  // const changeToRequest = () => {
+  //   setServices(onRequest);
+  //   setStateButton("request");
+  // };
 
   const changeToQuick = () => {
     setServices(quickBooking);
@@ -383,6 +371,14 @@ const Products = () => {
     delete productsRequest.request.Filter.Names;
     delete productsRequest.request.Filter.TagCriteria;
 
+    searchParams.delete("date");
+    searchParams.delete("category");
+    searchParams.delete("keyword");
+    searchParams.delete("min");
+    searchParams.delete("max");
+
+    setSearchParams(searchParams);
+
     getData();
   }
 
@@ -418,13 +414,13 @@ const Products = () => {
               >
                 {t("quick_booking")}
               </Button>
-              <Button
+              {/* <Button
                 variant={stateButton === "request" ? "primary" : "secondary"}
                 onClick={() => changeToRequest()}
                 className="fw-bold me-2 me-lg-3"
               >
                 {t("request_book")}
-              </Button>
+              </Button> */}
               <Button
                 variant={stateButton === "map" ? "primary" : "secondary"}
                 onClick={() => changeToMap()}

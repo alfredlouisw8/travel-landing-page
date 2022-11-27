@@ -10,6 +10,8 @@ import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { isEmpty } from "lodash";
+import { produce } from 'immer'
 
 import {
   bodyRequest,
@@ -40,7 +42,7 @@ const ProductDetail = () => {
   const [onRequest, setOnRequest] = useState("true");
   const [quotesInfo, setQuotesInfo] = useState({});
   const [errorItems, setErrorItems] = useState(false);
-
+  const [totalPrice, setTotalPrice] = useState([]);
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
   const [language] = useOutletContext();
@@ -60,6 +62,12 @@ const ProductDetail = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const langParams = searchParams.get("lang");
+    detailRequest.request.Language = language === "en" ? "en-US" : "jp-JP";
+    if (langParams) {
+      detailRequest.request.Language = language === "en" ? "en-US" : "jp-JP";
+    }
 
     setDetailShow(false);
     setProductItemShow("none");
@@ -95,13 +103,19 @@ const ProductDetail = () => {
     if (onReq === "true") detailRequest.request.ShortName = distributorRequest;
     else detailRequest.request.ShortName = distributorQuick;
 
-    axios
-      .post(endpoints.search, detailRequest, { headers: headers })
-      .then((response) => {
-        setService(response.data.Entities[0]);
-        setDetailShow(true);
-      });
-  }, [searchParams, location]);
+    if (!langParams || language === langParams) {
+      axios
+        .post(endpoints.search, detailRequest, { headers: headers })
+        .then((response) => {
+          setService(response.data.Entities[0]);
+          setDetailShow(true);
+        });
+    }
+  }, [searchParams, location, language]);
+
+  useEffect(() => {
+    setBookingQuotes([]);
+  }, []);
 
   useEffect(() => {
     const onReq = searchParams.get("on_req");
@@ -115,17 +129,30 @@ const ProductDetail = () => {
     }
   }, [service]);
 
+  useEffect(() => {
+    setBookingQuotes(bookingQuotes.sort((a, b) => a.Name - b.Name));
+  }, [bookingQuotes]);
+
   const getQuote = (values) => {
     setProductItemShow("none");
 
     quoteRequest.request.Configurations[0].Pax.Adults =
-      parseInt(values && values.pax) || 2;
+      parseInt(values && values.pax) || 1;
+    quoteRequest.request.Configurations[0].Pax.Children =
+      parseInt(values && values.children) || 0;
+    if (service.IndustryCategoryGroups[0] === 1) {
+      quoteRequest.request.Configurations[0].Pax.Seniors =
+        parseInt(values && values.seniors) || 0;
+    } else {
+      quoteRequest.request.Configurations[0].Pax.Seniors = 0;
+    }
     quoteRequest.request.CommencementDate =
-      (values && values.date) || new Date();
-    quoteRequest.request.Duration = parseInt(values && values.duration) || 1;
+      (values && new Date(values.date)) || new Date();
+    quoteRequest.request.Duration = parseInt(values && values.duration) || null;
+
+    setBookingQuotes([]);
 
     if (service && service.Children.length > 0) {
-      setBookingQuotes([]);
       const onReq = searchParams.get("on_req");
       if (onReq === "true") quoteRequest.request.ShortName = distributorRequest;
       else quoteRequest.request.ShortName = distributorQuick;
@@ -140,8 +167,8 @@ const ProductDetail = () => {
           .post(endpoints.bookingQuote, quoteRequest, { headers: headers })
           .then((response) => {
             const mergeData = { ...service.Children[i], ...response.data };
-            mergeData.id = i + 1;
-            mergeData.quantity = 2;
+            mergeData.id = response.data.Configurations[0].ProductId;
+            mergeData.quantity = 1;
             mergeData.price = response.data.Configurations[0].Quotes
               ? response.data.Configurations[0].Quotes[0].TotalPrice
               : null;
@@ -177,7 +204,26 @@ const ProductDetail = () => {
 
   const changeQuantity = (value, id) => {
     bookingQuotes.map((item) => {
-      if (item.id === id) item.quantity = value;
+      if (item.id === id) {
+        item.quantity = value;
+        const price = value * item.Configurations[0].Quotes[0].TotalPrice;
+        if (!isEmpty(totalPrice)) {
+          totalPrice.map((item) => {
+            if (item.id === id) {
+              setTotalPrice(
+                produce((draft) => {
+                  const dataPrice = draft.find((item) => item.id === id);
+                  dataPrice.totalPrice = price;
+                })
+              );
+            } else {
+              setTotalPrice((prev) => [...prev, { id: id, totalPrice: price }]);
+            }
+          });
+        } else {
+          setTotalPrice((prev) => [...prev, { id: id, totalPrice: price }]);
+        }
+      }
     });
   };
 
@@ -209,6 +255,18 @@ const ProductDetail = () => {
 
     return serviceType;
   };
+
+  const calendarUpdate = (date) => {
+    detailRequest.request.Output.Availability.StartDate = date;
+
+    axios
+      .post(endpoints.search, detailRequest, { headers: headers })
+      .then((response) => {
+        setService(response.data.Entities[0]);
+        setDetailShow(true);
+      });
+  };
+
 
   return (
     <>
@@ -262,6 +320,7 @@ const ProductDetail = () => {
                 date={date}
                 service={service}
                 handleSubmit={handleSubmit}
+                calendarUpdate={calendarUpdate}
               />
               <div
                 className="availableProducts mb-4"
@@ -278,6 +337,7 @@ const ProductDetail = () => {
                   service={service}
                   quotesInfo={quotesInfo}
                   error={errorItems}
+                  totalPrice={totalPrice}
                 />
               </div>
               <SkeletonItems skeletonItemShow={skeletonItemShow} />

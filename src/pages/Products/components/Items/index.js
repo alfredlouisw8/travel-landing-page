@@ -29,7 +29,7 @@ const Items = ({
 }) => {
   const { t, i18n } = useTranslation();
 
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('jp');
 
   useEffect(() => {
     setLang(i18n.language);
@@ -70,9 +70,9 @@ const Items = ({
                   </div>
                   <div className="price">
                     {service.Availability.Calendar.LowestRate &&
-                      (lang === 'jp' ?  `¥${formatMoney(
+                      (lang === 'jp' ? `¥${formatMoney(
                         service.Availability.Calendar.LowestRate
-                      )} から` :  `From ¥${formatMoney(
+                      )} から` : `From ¥${formatMoney(
                         service.Availability.Calendar.LowestRate
                       )}`)
                     }

@@ -54,9 +54,9 @@ const Filter = ({ filter, priceRange, setPriceRange, setCategory, category, setD
   };
 
   const minDate = () => {
-    var someDate = new Date();
-    var numberOfDaysToAdd = 2;
-    var result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+    const someDate = new Date();
+    const numberOfDaysToAdd = 2;
+    const result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
     return new Date(result)
   }
 

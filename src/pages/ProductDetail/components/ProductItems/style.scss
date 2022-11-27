@@ -4,6 +4,7 @@
   .items {
     .productItem {
       margin-bottom: 2rem;
+
       .info {
         padding-left: 1rem;
         border-left: 6px solid $secondary;
@@ -26,6 +27,14 @@
             width: fit-content;
           }
         }
+
+        .timeSelect {
+          height: auto !important;
+          padding-right: 32px;
+          margin-left: .5rem;
+        }
+
+
         .name,
         .price {
           font-weight: bold;
@@ -76,6 +85,73 @@
           padding: 0.75rem 1.5rem;
           white-space: nowrap;
         }
+      }
+    }
+  }
+}
+
+.imageSliders {
+
+  .modal-content {
+    background-color: transparent;
+    border: none;
+
+    .btn-close {
+      background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+      opacity: 1;
+    }
+
+    .modal-header {
+      color: white;
+    }
+
+    .modal-body {
+
+      .image {
+        height: 75vh;
+        object-fit: contain;
+        margin: auto;
+        width: 99%;
+      }
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: white;
+      opacity: 1;
+    }
+
+    .slick-dots li button:before {
+      color: white;
+      opacity: .5;
+    }
+  }
+}
+
+.mainImage {
+  position: relative;
+
+  .zoomIn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-size: 24px;
+    height: 100%;
+    background-color: rgba($color: black, $alpha: 0.15);
+    transition: all .2s;
+
+    &:hover {
+      background-color: rgba($color: black, $alpha: 0.3);
+      font-size: 28px;
+    }
+
+    svg {
+      path {
+        fill: white;
       }
     }
   }

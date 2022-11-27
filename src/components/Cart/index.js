@@ -36,10 +36,13 @@ const Cart = () => {
     items.map((item) => {
       const data = {
         ProductId: item.Configurations[0].ProductId,
-        Commence: item.Configurations[0].Quotes[0].Commence,
-        Conclude: item.Configurations[0].Quotes[0].Conclude,
-        Pax: item.Configurations[0].Pax,
-        TotalPrice: item.Configurations[0].Quotes[0].TotalPrice,
+        Commence: item.selectedQuote ? item.selectedQuote.Commence : item.Configurations[0].Quotes[0].Commence,
+        Conclude: item.selectedQuote ? item.selectedQuote.Conclude : item.Configurations[0].Quotes[0].Conclude,
+        Pax:
+          item.IndustryCategoryGroups[0] === 3
+            ? { Adults: item.quantity }
+            : item.Configurations[0].Pax,
+        TotalPrice: item.selectedQuote ? item.selectedQuote.TotalPrice : item.Configurations[0].Quotes[0].TotalPrice,
       };
       products = [...products, data];
     });
@@ -106,7 +109,7 @@ const Cart = () => {
                       {item.Name}
                     </div>
                     <div className="date">
-                      {moment(item.Configurations[0].Quotes[0].Commence).format(
+                      {moment(item.selectedQuote ? item.selectedQuote.Commence : item.Configurations[0].Quotes[0].Commence).format(
                         "ll, hh:mm A"
                       )}
                     </div>
@@ -116,12 +119,24 @@ const Cart = () => {
                       </div>
                     ) : (
                       <>
-                        <div className="qty">
-                          Pax: {item.Configurations[0].Pax.Adults}
+                        <div className="qty d-flex fw-bold">
+                          <div className="me-3">
+                            {t("adults")}: {item.Configurations[0].Pax.Adults}
+                          </div>
+                          <div className="me-3">
+                            {item.Configurations[0].Pax.Children > 0 &&
+                              `${t("children")}: ${item.Configurations[0].Pax.Children
+                              }`}
+                          </div>
+                          <div>
+                            {item.Configurations[0].Pax.Seniors > 0 &&
+                              `${t("seniors")} ${item.Configurations[0].Pax.Seniors
+                              }`}
+                          </div>
                         </div>
                         {item.IndustryCategoryGroups[0] === 0 && (
                           <div className="duration">
-                            Duration:{" "}
+                            {t("duration")}:
                             {item.Configurations[0].Quotes[0].Duration}
                           </div>
                         )}

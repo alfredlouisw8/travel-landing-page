@@ -1,0 +1,12 @@
+@import "../../../../assets/styles/variables";
+
+
+.react-calendar {
+    width: 450px;
+    z-index: 4;
+
+    @include breakpoint(mobileonly) {
+        width: 90%;
+        left: 20px;
+    }
+}
