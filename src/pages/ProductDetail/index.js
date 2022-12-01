@@ -135,6 +135,7 @@ const ProductDetail = () => {
 
   const getQuote = (values) => {
     setProductItemShow("none");
+    debugger; //eslint-disable-line
 
     quoteRequest.request.Configurations[0].Pax.Adults =
       parseInt(values && values.pax) || 1;
@@ -188,13 +189,19 @@ const ProductDetail = () => {
   };
 
   const handleSubmit = (e) => {
+    debugger; //eslint-disable-line
     e.preventDefault();
     let values = null;
     if (service.IndustryCategoryGroups[0] !== 3) {
       values = {
         date: e.target[0] ? e.target[0].value : "",
-        duration: service.IndustryCategoryGroups[0] === 0 ? e.target[1].value : null,
-        pax: service.IndustryCategoryGroups[0] === 0 ? e.target[2].value : e.target[1].value,
+        duration:
+          service.IndustryCategoryGroups[0] === 0 ? e.target.duration.value : null,
+        pax: e.target.pax.value,
+        children: service.Settings.PresentChildren
+          ? e.target.children.value
+          : "",
+        seniors: service.Settings.PresentSeniors ? e.target.senior.value : "",
       };
       setQuotesInfo(values);
     }

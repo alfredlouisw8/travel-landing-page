@@ -313,7 +313,7 @@ const ProductItems = ({
                           changeQuantity(e.target.value, booking.id)
                         }
                         type="number"
-                        defaultValue={2}
+                        defaultValue={1}
                       />
                     </div>
                   ) : (

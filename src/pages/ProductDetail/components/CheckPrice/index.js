@@ -126,16 +126,19 @@ const CheckPrice = ({ service, handleSubmit, calendarUpdate }) => {
             {service &&
               service.IndustryCategoryGroups &&
               service.IndustryCategoryGroups[0] === 0 && (
-                <div className="formIcon mb-3 mb-lg-0">
-                  <div className="icon">
-                    <img src={Night} />
+                <div className="formGroup">
+                  <Form.Label>{t("duration")}</Form.Label>
+                  <div className="formIcon mb-3 mb-lg-0">
+                    <div className="icon">
+                      <img src={Night} />
+                    </div>
+                    <Form.Control
+                      className="me-2"
+                      defaultValue={1}
+                      type="number"
+                      name="duration"
+                    />
                   </div>
-                  <Form.Control
-                    className="me-2"
-                    defaultValue={1}
-                    type="number"
-                    name="duration"
-                  />
                 </div>
               )}
             {service &&
