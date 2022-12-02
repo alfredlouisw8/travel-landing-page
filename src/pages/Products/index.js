@@ -392,7 +392,7 @@ const Products = () => {
           <div className="titlePage">{t("search")}</div>
           <div className="reset" onClick={() => resetFilter()}>{t('reset_filter')}</div>
           <Filter
-            lang={language}
+            language={language}
             filter={filterData}
             date={date}
             category={category}

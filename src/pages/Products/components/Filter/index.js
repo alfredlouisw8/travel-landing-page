@@ -20,7 +20,7 @@ const propTypes = {
   date: PropTypes.date,
   typeShop: PropTypes.string,
   keyword: PropTypes.string,
-  priceRange: PropTypes.string,
+  priceRange: PropTypes.string
 };
 
 const Filter = ({ filter, priceRange, setPriceRange, setCategory, category, setDate, date, setKeyword, keyword, setTypeShop, typeShop }) => {

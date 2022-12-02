@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useSearchParams } from "react-router-dom";
 import { i18n } from "./lang/i18n";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer } from 'react-toastify';
+import moment from "moment";
+import 'moment/locale/ja';
 
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
@@ -22,9 +22,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (langParams && langParams !== language) {
-      setLanguage(langParams);
-    }
+    setLanguage(langParams);
+    i18n.changeLanguage(langParams);
+    debugger; //eslint-disable-line
+
+    const langLocale = langParams === 'jp' ? 'ja' : langParams;
+    moment.locale(langLocale);
   }, [langParams]);
 
   const handleOnclick = (e) => {
@@ -40,7 +43,6 @@ function App() {
       <Navigation />
       <div className="translate container">
         <div className="content">
-          <FontAwesomeIcon icon={faLanguage} />
           <button
             className={`btn ${language === "en" ? "active" : ""}`}
             value="en"

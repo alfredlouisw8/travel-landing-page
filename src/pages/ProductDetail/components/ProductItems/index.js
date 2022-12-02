@@ -314,6 +314,7 @@ const ProductItems = ({
                         }
                         type="number"
                         defaultValue={1}
+                        min={1}
                       />
                     </div>
                   ) : (

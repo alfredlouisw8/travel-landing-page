@@ -29,13 +29,19 @@ const BasicInfo = ({ service }) => {
         <tr>
           <td>{t("address")}</td>
           <td>
-            {service.PhysicalAddress.Line1}, {service.PhysicalAddress.City},{" "}
-            {service.PhysicalAddress.PostCode}, {service.PhysicalAddress.State}
+            {service.PhysicalAddress.PostCode}{service.PhysicalAddress.State}
+            {service.PhysicalAddress.Line1}{service.PhysicalAddress.City}
           </td>
         </tr>
         <tr>
           <td>{t("phone")}</td>
-          <td>{service.MainPhone.FullPhoneNumberLocalised || "-"}</td>
+          <td>
+            {service.MainPhone.FullPhoneNumberLocalised
+              ? service.MainPhone.FullPhoneNumberLocalised.replace("+81", "0")
+                .replace(" (", "")
+                .replace(")", "")
+              : "-"}
+          </td>
         </tr>
         <tr>
           <td>{t("website")}</td>
@@ -47,9 +53,9 @@ const BasicInfo = ({ service }) => {
                 service.Website.includes("https") ||
                   service.Website.includes("http")
                   ? service.Website
-                  : `https://${service.Website}`
+                  : `//${service.Website}`
               } rel="noreferrer">{service.Website}
-            </a>) || "No Public Website"}
+            </a>) || "-"}
           </td>
         </tr>
         <tr>

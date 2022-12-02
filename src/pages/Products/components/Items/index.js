@@ -42,7 +42,10 @@ const Items = ({
           return (
             <Col xs={12} lg={4} key={i}>
               <div className="item">
-                <div className="image">
+                <div className="image" onClick={(e) => {
+                  e.preventDefault();
+                  goToDetail(service.Id, service.OnRequestOnly);
+                }}>
                   <img
                     src={
                       service.Images !== null
@@ -57,7 +60,7 @@ const Items = ({
                     href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      goToDetail(service.Id);
+                      goToDetail(service.Id, service.OnRequestOnly);
                     }}
                   >
                     <h6 className="title">{service.Name}</h6>
