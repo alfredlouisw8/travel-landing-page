@@ -36,7 +36,7 @@ const Filter = ({ filter, priceRange, setPriceRange, setCategory, category, setD
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = {
-      date: event.target[0].value ? new Date(event.target[0].value) : null,
+      date: event.target[0].value ? new Date(date.setHours(0, 0, 0, 0)) : null,
       category: category,
       minRange: priceRange?.includes("-")
         ? priceRange?.split("-")[0]
@@ -54,10 +54,7 @@ const Filter = ({ filter, priceRange, setPriceRange, setCategory, category, setD
   };
 
   const minDate = () => {
-    const someDate = new Date();
-    const numberOfDaysToAdd = 2;
-    const result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
-    return new Date(result)
+    return new Date()
   }
 
   return (

@@ -55,9 +55,6 @@ const ProductDetail = () => {
 
   const detailRequest = bodyRequest;
 
-  detailRequest.request.Language = `${language}-JP`;
-  quoteRequest.request.Language = `${language}`;
-
   detailRequest.request.Filter.Ids = [id];
 
   useEffect(() => {
@@ -65,8 +62,10 @@ const ProductDetail = () => {
 
     const langParams = searchParams.get("lang");
     detailRequest.request.Language = language === "en" ? "en-US" : "jp-JP";
+    quoteRequest.request.Language = language === "en" ? "en-US" : "jp-JP";
     if (langParams) {
       detailRequest.request.Language = language === "en" ? "en-US" : "jp-JP";
+      quoteRequest.request.Language = language === "en" ? "en-US" : "jp-JP";
     }
 
     setDetailShow(false);
@@ -135,7 +134,6 @@ const ProductDetail = () => {
 
   const getQuote = (values) => {
     setProductItemShow("none");
-    debugger; //eslint-disable-line
 
     quoteRequest.request.Configurations[0].Pax.Adults =
       parseInt(values && values.pax) || 1;
@@ -147,9 +145,10 @@ const ProductDetail = () => {
     } else {
       quoteRequest.request.Configurations[0].Pax.Seniors = 0;
     }
-    quoteRequest.request.CommencementDate =
-      (values && new Date(values.date)) || new Date();
+    quoteRequest.request.CommencementDate = values?.date || new Date();
     quoteRequest.request.Duration = parseInt(values && values.duration) || null;
+
+    console.log(quoteRequest.request);
 
     setBookingQuotes([]);
 
@@ -188,13 +187,12 @@ const ProductDetail = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    debugger; //eslint-disable-line
+  const handleSubmit = (e, date) => {
     e.preventDefault();
     let values = null;
     if (service.IndustryCategoryGroups[0] !== 3) {
       values = {
-        date: e.target[0] ? e.target[0].value : "",
+        date: e.target[0] ? new Date(new Date(date).setHours(0, 0, 0, 0)) : "",
         duration:
           service.IndustryCategoryGroups[0] === 0 ? e.target.duration.value : null,
         pax: e.target.pax.value,
@@ -324,7 +322,6 @@ const ProductDetail = () => {
                 dangerouslySetInnerHTML={{ __html: service.LongDescription }}
               ></div>
               <CheckPrice
-                date={date}
                 service={service}
                 handleSubmit={handleSubmit}
                 calendarUpdate={calendarUpdate}

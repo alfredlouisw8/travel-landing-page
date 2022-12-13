@@ -38,7 +38,7 @@ const CheckPrice = ({ service, handleSubmit, calendarUpdate }) => {
   }, [service]);
 
   const setMinDate = () => {
-    return new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000);
+    return new Date();
   };
 
   const checkDatePrice = () => {
@@ -66,7 +66,7 @@ const CheckPrice = ({ service, handleSubmit, calendarUpdate }) => {
   return (
     <div className="checkPrice mb-4">
       <h4>{service?.IndustryCategoryGroups && service.IndustryCategoryGroups[0] === 1 ? t('check_price_activ') : service.IndustryCategoryGroups[0] === 3 ? t('check_price_goods') : t('check_price')}</h4>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(e) => handleSubmit(e, date)}>
         <div className="d-flex justify-content-between">
           <div className="d-flex flex-wrap">
             {service &&

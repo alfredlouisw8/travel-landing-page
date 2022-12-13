@@ -24,7 +24,6 @@ function App() {
   useEffect(() => {
     setLanguage(langParams);
     i18n.changeLanguage(langParams);
-    debugger; //eslint-disable-line
 
     const langLocale = langParams === 'jp' ? 'ja' : langParams;
     moment.locale(langLocale);

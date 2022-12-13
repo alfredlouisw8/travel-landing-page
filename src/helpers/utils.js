@@ -77,7 +77,7 @@ const quoteRequest = {
         },
       },
     ],
-    Shortname: distributorQuick,
+    ShortName: distributorQuick,
   },
 };
 
