@@ -1,6 +1,6 @@
 {
   "name": "ako-mag",
-  "version": "1.2",
+  "version": "1.4",
   "private": true,
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",

@@ -9,9 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Logo from "../../assets/images/logo.svg";
-import Img from "../../assets/images/nav-image-au.webp";
-import ImgLg from "../../assets/images/nav-image-au.webp";
-import Img2 from "../../assets/images/nav-image-2-au.webp";
+import Img from "../../assets/images/nav-image.webp";
+import ImgLg from "../../assets/images/nav-image.webp";
+import Img2 from "../../assets/images/nav-image-2.webp";
 
 import "./style.scss";
 
@@ -57,16 +57,16 @@ const Navigation = () => {
             <Col xs={9} sm={5} md={"auto"} className="navRight">
               <Row className="align-items-end ">
                 <Col sm={7} md>
-                  <div className="textSkew">秋のイチオシ</div>
+                  <div className="textSkew">冬のイチオシ</div>
                   <div className="navImages">
                     <div className="topRight">
-                      <h1>
-                        <span>赤穂の秋は､</span> <br />
-                        コスモス畑で🚴🚴‍♀️
+                      <h1 style={{ color: "black" }}>
+                        <span>赤穂の冬は､</span> <br />
+                        牡蠣小屋と温泉♨️
                       </h1>
                       <p className="mt-2">
-                        紅葉で秋を感じながら <br />
-                        街中のカフェ巡り
+                        瀬戸内海が育む牡蠣と <br />
+                        絶景温泉を堪能
                       </p>
                     </div>
                     <picture className="image">
@@ -92,13 +92,13 @@ const Navigation = () => {
                     </Col>
                     <Col xs={7} sm={12} className="textDesc d-flex flex-column">
                       <div className="d-inline-block mt-2 mt-md-4">
-                        ｢見応え抜群！有年コスモス畑｣
+                        ｢夕日眺めながらの牡蠣小屋｣
                       </div>
                       <div className="text-end d-inline-block mt-2 mt-md-4">
-                        ｢登山道を彩る紅葉｣
+                        ｢牡蠣汁…ジュワあつあつ｣
                       </div>
                       <div className="d-inline-block mt-2 mt-md-4">
-                        ｢気軽にトレッキング⛰🥾｣
+                        ｢贅沢な心地よ…｣
                       </div>
                       <div className="text-end d-inline-block mt-2 mt-md-4">
                         ｢うむ…良きかな赤穂｣
