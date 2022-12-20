@@ -41,7 +41,7 @@ const ProductItems = ({
   const { addItem } = useCart();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const [descMore, setDescMore] = useState(false);
+  const [descMore, setDescMore] = useState([]);
   const [extras, setExtras] = useState([]);
   const [show, setShow] = useState(false);
   const [selectedBooking, setSelectedBooking] = useState();
@@ -51,6 +51,7 @@ const ProductItems = ({
   const [openModal, setOpenModal] = useState();
   const descRef = useRef([]);
   const [scrollable, setScrollable] = useState([]);
+  const [posSlide, setPosSlide] = useState(0);
   const [selectedQuote, setSelectedQuote] = useState();
 
 
@@ -169,6 +170,7 @@ const ProductItems = ({
   };
 
   const seeMore = (id) => {
+    debugger; //eslint-disable-line
     if (descMore.length > 0) {
       descMore.map((item) => {
         if (item === id) {
@@ -237,12 +239,14 @@ const ProductItems = ({
       }`;
   };
 
-  const openSliders = (id) => {
+  const openSliders = (id, pos) => {
+    setPosSlide(pos);
     setOpenModal(id);
   };
   const settings = {
     dots: true,
     adaptiveHeight: true,
+    initialSlide: posSlide,
   };
 
 
@@ -264,7 +268,7 @@ const ProductItems = ({
                           : "default",
                     }}
                     onClick={() =>
-                      booking.Images.length > 0 ? openSliders(booking.Id) : null
+                      booking.Images.length > 0 ? openSliders(booking.Id, i) : null
                     }
                   >
                     {booking.Images && booking.Images.length > 0 && (
