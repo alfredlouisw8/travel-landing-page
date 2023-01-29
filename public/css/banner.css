@@ -1,0 +1,60 @@
+.wrapper_banner {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #efefef;
+    margin: 0;
+    padding: 40px 0 0 0;
+    text-align: center;
+}
+
+#maincontainer a.bnr_bg {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 29.4%;
+    padding: 0 0 0 0;
+    margin: 0 1.7% 15px;
+    text-align: left;
+}
+
+
+#maincontainer a.bnr_bg img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1em 0;
+    padding: 0 0 0 0;
+}
+
+#maincontainer a.bnr {
+    display: inline-block;
+    width: 16%;
+    padding: 0 0 0 0;
+    margin: 0 1.7% 0;
+    text-align: left;
+}
+
+#maincontainer a.bnr img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1em 0;
+    padding: 0 0 0 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    #maincontainer a.bnr_bg {
+        float: none;
+        width: 80%;
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+
+    #maincontainer a.bnr {
+        float: none;
+        width: 80%;
+        padding: 0 0 0 0;
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+
+}
+

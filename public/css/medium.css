@@ -1,0 +1,785 @@
+/*--------------------------------------------------------------
+共通
+--------------------------------------------------------------*/
+
+body p {
+    font-size: 1.2em;
+}
+
+.pushevent_r .ttltxt {
+    font-size: 1.4em;
+}
+
+.wrapper_spwide {
+    width: 92%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sp {
+    display: block;
+}
+
+.never {
+    display: block;
+}
+
+.sp_none {
+    display: none;
+}
+
+.sp_space {
+    margin-bottom: 60px;
+}
+
+#ttl_mds h2 {
+    font-size: 1.8em;
+    margin-top: 5px;
+}
+
+.old_name {
+    font-size: 12px;
+    margin: 0 0 0.75em;
+    font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "HG明朝B", "ＭＳ 明朝", "MS PMincho", serif;
+}
+
+.pickup_slick .pickup_event {
+    display: none;
+}
+
+.pickup_slick .pickup_event_tab {
+    display: block;
+}
+
+.stdtxt {
+    font-size: 1em;
+}
+
+.w100_tab {
+    width: 100% !important;
+}
+
+
+/*--------------------------------------------------------------
+見出し・リード
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+タブレットでの文字サイズ調整
+--------------------------------------------------------------*/
+
+.icon_txt_name {
+    font-size: 16px;
+}
+
+.tempo .icon_txt_name {
+    font-size: 14px;
+}
+
+.detail_overview h2 .txt_yomi {
+    font-size: 0.6em;
+}
+
+.icon_txt2 {
+    font-size: 16px;
+}
+
+.icon_txt2 {
+    font-size: 16px;
+}
+
+.txt_attribute {
+    font-size: 1.1em;
+}
+
+.area_sns_mds .area_name {
+    font-size: 1.2em;
+}
+
+.free_img_area p {
+    font-size: 1.2em;
+}
+
+body#spring p.event_mds,
+body#summer p.event_mds,
+body#autumn p.event_mds,
+body#winter p.event_mds {
+    font-size: 1.4em;
+}
+
+
+/*--------------------------------------------------------------
+ボタン
+--------------------------------------------------------------*/
+
+.btn_link_p,
+.btn_link_w {
+    width: 100%;
+}
+
+body#spring .btn_link_p,
+body#summer .btn_link_p,
+body#autumn .btn_link_p,
+body#winter .btn_link_p {
+    width: 88%
+}
+
+
+/*--------------------------------------------------------------
+タイトル周り
+--------------------------------------------------------------*/
+
+.detail_overview h2 .txt_ttl {
+    margin: 0 0 -10px 0;
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+4col→画像横並びコンテンツ
+--------------------------------------------------------------*/
+
+.list_cont_sp {
+    padding: 0 0 30px;
+    margin: 0 0 30px;
+    text-align: left;
+}
+
+.list_cont_sp .photo {
+    width: 28%;
+    padding: 0 3% 0 0;
+    float: left;
+    position: relative;
+}
+
+.list_cont_sp .photo img {
+    width: 100%;
+    height: auto;
+}
+
+.list_cont_sp .text {
+    width: 69%;
+    padding: 0;
+    float: left;
+}
+
+
+/*--------------------------------------------------------------
+枠付きコンテンツ
+--------------------------------------------------------------*/
+
+.border_rad {
+    padding: 30px 0;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------
+花だより インフォ
+--------------------------------------------------------------*/
+
+.cms_box {
+    width: 88%;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 0 auto 20px;
+    padding: 5%;
+}
+
+.cms_box .spot_layout dt {
+    width: 100%;
+    float: none;
+}
+
+.cms_box .spot_layout dd {
+    width: 100%;
+    padding: 0.5em 0;
+    float: none;
+}
+
+
+/*--------------------------------------------------------------
+世界遺産
+--------------------------------------------------------------*/
+
+.stdtxt_l {
+    width: 100%;
+}
+
+.imgright {
+    width: 84%;
+    margin: 0 auto 30px;
+    display: block;
+    float: none;
+}
+
+
+/*--------------------------------------------------------------
+ナビゲーション
+--------------------------------------------------------------*/
+
+#globalnav ul.menunav li {
+    font-size: 1.1em;
+}
+
+#globalnav ul.menunav li a span {
+    background: none;
+    padding: 0;
+    background-size: auto 40%;
+}
+
+#globalnav ul.menunav li a.otherpage span {
+    background: none;
+    padding: 0;
+    background-size: auto 60%;
+}
+
+
+/*------------------------------------------------------------------------
+テーブル
+------------------------------------------------------------------------*/
+
+.tbl_detail th {
+    width: 30%;
+    font-size: 1.2em;
+}
+
+.tbl_detail td {
+    font-size: 1.2em;
+}
+
+.tbl_detail table td {
+    font-size: 1em;
+}
+
+.tbl_detail_full th {
+    width: 30%;
+    font-size: 1.2em;
+}
+
+.tbl_detail_full td {
+    font-size: 1.2em;
+}
+
+
+/*------------------------------------------------------------------------
+レイアウト
+------------------------------------------------------------------------*/
+
+.left_main {
+    width: 100%;
+    text-align: left;
+}
+
+.right_sub {
+    width: 100%;
+    text-align: left;
+}
+
+.list_cont .text dt {
+    width: 18%;
+    padding: 0 2% 5px 0;
+    margin: 0;
+    float: left;
+    font-size: 1.2em;
+}
+
+.list_cont .text dd {
+    width: 80%;
+    padding: 0 0 5px 0;
+    margin: 0;
+    float: left;
+    font-size: 1.2em;
+}
+
+
+/*------------------------------------------------------------------------
+カラム
+------------------------------------------------------------------------*/
+
+.col4 {
+    width: 48%;
+    height: auto;
+    float: left;
+    margin-right: 4%;
+}
+
+.col4:nth-of-type(2n+2) {
+    margin-right: 0;
+}
+
+.list_col .col4 {
+    padding-bottom: 0;
+}
+
+
+/*------------------------------------------------------------------------
+情報
+------------------------------------------------------------------------*/
+
+.img_map {
+    width: 50%;
+    float: left;
+}
+
+.info_gmap {
+    width: 50%;
+    float: left;
+}
+
+
+/*------------------------------------------------------------------------
+イベント
+------------------------------------------------------------------------*/
+
+.list_cont .photo {
+    padding: 4px 3% 1em 0;
+    float: left;
+    position: relative;
+}
+
+body#spring .icon_txt,
+body#summer .icon_txt,
+body#autumn .icon_txt,
+body#winter .icon_txt {
+    width: 99%;
+    margin: 0 0 5px 0;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+
+.list_cont .text {
+    padding: 0;
+    float: left;
+}
+
+.list_cont .text .event_mds {
+    margin: 0 0 0 0;
+    display: block;
+}
+
+.event_yomi {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    display: block;
+}
+
+
+/*------------------------------------------------------------------------
+絞り込み
+------------------------------------------------------------------------*/
+
+.date_box {
+    width: 100%;
+}
+
+.month_box {
+    width: 100%;
+}
+
+body#spring #genrenav ul.menunav li,
+body#summer #genrenav ul.menunav li,
+body#autumn #genrenav ul.menunav li,
+body#winter #genrenav ul.menunav li {
+    width: 49%;
+    margin: 0 0.5% 1em;
+}
+
+#genrenav ul.menunav li span {
+    background: transparent url("../img/common/icon_osusume_arrow02.png") no-repeat 0 6px;
+}
+
+#genrenav.stay ul.menunav li span {
+    background: transparent url("../img/common/icon_osusume_arrow02.png") no-repeat 0 6px;
+}
+
+.show .col4,
+.slides .col4 {
+    margin-right: 3%;
+}
+
+.show .col4:nth-of-type(2n+2) {
+    margin-right: 3%;
+}
+
+.show .list_cont_sp .photo {
+    width: 100%;
+}
+
+.show .list_cont_sp .text {
+    width: 100%;
+}
+
+
+/*------------------------------------------------------------------------
+集合
+------------------------------------------------------------------------*/
+
+.left_cont iframe {
+    width: 100%;
+    height: 300px;
+}
+
+
+/*--------------------------------------------------------------
+概要
+--------------------------------------------------------------*/
+
+.half_l {
+    width: 100%;
+}
+
+.half_s {
+    width: 100%;
+}
+
+
+/*------------------------------------------------------------------------
+関連施設
+------------------------------------------------------------------------*/
+
+.box_area {
+    margin-bottom: 60px;
+}
+
+.box_area h3 {
+    font-size: 1em;
+}
+
+#maincontainer li.item {
+    font-size: 1.2em;
+}
+
+#maincontainer li.item p {
+    font-size: 1em;
+}
+
+.icon_area {
+    font-size: 14px;
+}
+
+
+/*------------------------------------------------------------------------
+バナー
+------------------------------------------------------------------------*/
+
+#maincontainer a.bnr_bg {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    width: 50%;
+    padding: 0 0 0 0;
+    margin: 0 auto 15px;
+    text-align: left;
+}
+
+#maincontainer a.bnr {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 28%;
+    padding: 0 0 0 0;
+    margin: 0 1.8% 0;
+    float: none;
+}
+
+
+/*--------------------------------------------------------------
+ストックフォト
+--------------------------------------------------------------*/
+
+.img_stockphoto {
+    width: 54px;
+    vertical-align: sub;
+}
+
+#gradbody .cont_grad dt {
+    width: 100%;
+    padding: 0;
+}
+
+#gradbody .cont_grad dd {
+    width: 100%;
+    padding: 0;
+}
+
+#gradbody .cont_grad dd.comment {
+    width: 100%;
+    font-size: 0.9em;
+    margin-bottom: -20px;
+}
+
+#gradbody .cont_grad dd.btn {
+    width: 100%;
+}
+
+#gradbody .cont_grad dd ul li .newsdate {
+    font-size: 1em;
+}
+
+.cart_area .class_mds {
+    display: block;
+    padding: 0;
+    margin: 0 0 0.25em 0;
+}
+
+.cart_area .note {
+    display: block;
+    margin: 0 0 0.75em 0;
+}
+
+a.btn_cart {
+    float: none;
+}
+
+.cart_area ul {
+    padding: 0;
+}
+
+#searchbody .searchttl .search_box {
+    position: static;
+}
+
+ul.half_search li a {
+    width: 100%;
+}
+
+ul.half_search li:nth-child(2) a.top {
+    border-top: none;
+}
+
+.cart_area #cartbody .area_name {
+    width: 100%;
+}
+
+.cart_area #cartbody .txt_attribute {
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+    word-break: normal;
+}
+
+.att_area {
+    padding: 4%;
+}
+
+.half_l .area_links .btn_red a,
+.half_l .area_links .btn_blue a,
+.half_l .area_links .btn_green a,
+.half_l .area_links .btn_yellow a {
+    font-size: 14px;
+}
+
+.search_bnr {
+    letter-spacing: -.40em;
+    margin: 30px 0 20px 0;
+    /* 文字間を詰めて隙間を削除する */
+}
+
+.search_bnr a {
+    width: 48%;
+    margin: 0 4% 1em 0;
+    display: inline-block;
+    letter-spacing: normal;
+    /* 文字間を通常に戻す */
+}
+
+.search_bnr a:nth-child(even) {
+    margin: 0 0 1em 0;
+}
+
+
+/*--------------------------------------------------------------
+エリアで絞り込む 新レイアウト
+--------------------------------------------------------------*/
+
+.research_layout .area_links {
+    height: auto;
+    background: none;
+}
+
+.research_layout .area_links .btn_red,
+.research_layout .area_links .btn_green,
+.research_layout .area_links .btn_blue,
+.research_layout .area_links .btn_yellow {
+    width: 100%;
+    text-align: left;
+    position: static;
+}
+
+.research_layout .area_links .btn_red a,
+.research_layout .area_links .btn_green a,
+.research_layout .area_links .btn_blue a,
+.research_layout .area_links .btn_yellow a {
+    width: 100%;
+    font-size: 1em;
+}
+
+.research_layout .area_links .btn_red span,
+.research_layout .area_links .btn_green span,
+.research_layout .area_links .btn_blue span,
+.research_layout .area_links .btn_yellow span {
+    padding: 0.5em 0 1em;
+    text-align: left;
+}
+
+.research_layout .area_links .btn_red span a,
+.research_layout .area_links .btn_green span a,
+.research_layout .area_links .btn_blue span a,
+.research_layout .area_links .btn_yellow span a {
+    width: auto;
+}
+
+
+/*--------------------------------------------------------------
+2カラムシャドーボックス
+--------------------------------------------------------------*/
+
+.num_mds {
+    font-size: 1.2em;
+}
+
+.num_mds .num_txt {
+    padding: 0.25em 0.5em;
+    font-size: 1.4em;
+}
+
+
+/*--------------------------------------------------------------
+縁をむすぶ
+--------------------------------------------------------------*/
+
+.one_area .color_txt {
+    font-size: 0.8em;
+}
+
+
+/*--------------------------------------------------------------
+ようこそ奈良へ
+--------------------------------------------------------------*/
+
+.welcome .left_cont {
+    width: 100%;
+}
+
+.welcome .right_cont {
+    width: 100%;
+}
+
+.bgmain_welcome {
+    top: 10em;
+}
+
+
+/*--------------------------------------------------------------
+開花カレンダー
+--------------------------------------------------------------*/
+
+#flower_calendar {
+    width: 88%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 6%
+}
+
+#flower_calendar table {
+    width: 8.3%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-spacing: 1px;
+    table-layout: fixed;
+    background: #fff;
+    float: left;
+}
+
+#flower_calendar table th {
+    width: 8%;
+    padding: 7px 0;
+    margin: 0 0 15px;
+    color: #A8A8A8;
+    border: 1px solid #DDD;
+    background: #EFEFEF;
+    box-sizing: border-box;
+}
+
+#flower_calendar table td {
+    min-width: 5%;
+    height: 80px;
+    padding: 8px 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+/*--------------------------------------------------------------
+サイトポリシー・リンクについて
+--------------------------------------------------------------*/
+
+p.readtxt {
+    font-size: 1.0em;
+}
+
+
+/*------------------------------------------------------------------------
+アプリのご案内
+------------------------------------------------------------------------*/
+
+.app_ttlimg {
+    width: 76%;
+    margin: 0 0 8px 0;
+}
+
+#app .app_area {
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+#app .img_capture {
+    width: 45%;
+    margin: 0px 3% 40px 0px;
+    border: 1px solid #ddd;
+}
+
+#app .btn_dl {
+    width: 30%;
+}
+
+
+/*--------------------------------------------------------------
+ガイドブック
+--------------------------------------------------------------*/
+
+.book_img_area img {
+    width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+画像サイズ変更
+--------------------------------------------------------------*/
+
+#imagesize,
+.sns_btn #imagesize {
+    display: none;
+}
+
+.free_img_area.i1 img {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+和婚
+--------------------------------------------------------------*/
+
+ul.slides li.col4 {
+    width: 100% !important;
+}

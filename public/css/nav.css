@@ -1,0 +1,472 @@
+/*---------------------------グローバルメニュー背景---------------------------*/
+
+.navbar {
+    *position: relative;
+    *z-index: 2;
+    margin: 0 auto;
+    overflow: visible;
+    clear: both;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    *zoom: 1;
+}
+
+.navbar-inner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 0;
+    *zoom: 1;
+}
+
+.navbar-inner:before,
+.navbar-inner:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.navbar-inner:after {
+    clear: both;
+}
+
+.nav-collapse.collapse {
+    height: auto;
+    overflow: visible;
+}
+
+/*---------------------------グローバルメニュー---------------------------*/
+
+.nav {
+    width: 1140px;
+    display: block;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    list-style: none;
+}
+
+.nav > li {
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 9px 0 4px 0;
+    font-size: 0.9em;
+    line-height: 1.35;
+    font-family: "游明朝", "YuMincho", "HG明朝E", "HG明朝B", "ＭＳ 明朝", "MS PMincho", serif;
+}
+
+.nav > li > a {
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+.nav > li + li > a {
+    border-left: 0;
+    border-right: 1px solid #CCC;
+}
+
+.ie9 .nav > li {
+    line-height: 1.35;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+    font-size: 0.9em !important;
+}
+
+@media all and (-ms-high-contrast: none) {
+    .nav > li {
+        display: inline-block;
+        margin: 0 0 0 0;
+        line-height: 1.35;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+        font-size: 0.9em !important;
+    }
+}
+
+.nav > li:last-child {
+    margin: 0;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 13px 25px 13px 60px;
+    text-decoration: none;
+    border-bottom: #fff solid 4px;
+    background-size: auto 85% !important;
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav > li > a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nav > li.naramachi > a {
+    background: url(../img/common/ico_naramachi.png) 8px 5px no-repeat;
+    text-align: left;
+}
+
+.nav > li.naramachi > a:focus,
+.nav > li.naramachi > a:hover,
+.nav > li.naramachi > a.active {
+. border-bottom: #666 solid 4 px;
+    box-shadow: 0 6px 3px -3px #666,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #666,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #666,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.temples > a {
+    background: url(../img/common/ico_temples.png) 8px 5px no-repeat;
+}
+
+.nav > li.temples > a:focus,
+.nav > li.temples > a:hover,
+.nav > li.temples > a.active {
+    box-shadow: 0 6px 3px -3px #D17F7F,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #D17F7F,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #D17F7F,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.spot > a {
+    background: url(../img/common/ico_spot.png) 8px 5px no-repeat;
+	padding: 10 px 20 px 17 px 50 px;
+}
+
+.nav > li.spot > a:focus,
+.nav > li.spot > a:hover,
+.nav > li.spot > a.active {
+    box-shadow: 0 6px 3px -3px #847AAF,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #847AAF,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #847AAF,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.event > a {
+    background: url(../img/common/ico_event.png) 4px 5px no-repeat;
+}
+
+.nav > li.event > a:focus,
+.nav > li.event > a:hover,
+.nav > li.event > a.active {
+    box-shadow: 0 6px 3px -3px #9969A4,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #9969A4,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #9969A4,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.gourmet > a {
+    background: url(../img/common/ico_gourmet.png) 8px 5px no-repeat;
+}
+
+.nav > li.gourmet > a:focus,
+.nav > li.gourmet > a:hover,
+.nav > li.gourmet > a.active {
+    box-shadow: 0 6px 3px -3px #BAB362,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #BAB362,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #BAB362,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.stay > a {
+    background: url(../img/common/ico_stay.png) 13px 5px no-repeat;
+}
+
+.nav > li.stay > a:focus,
+.nav > li.stay > a:hover,
+.nav > li.stay > a.active {
+    box-shadow: 0 6px 3px -3px #83955A,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #83955A,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #83955A,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.modelcourse > a {
+    background: url(../img/common/ico_modelcourse.png) 8px 5px no-repeat;
+
+}
+
+.nav > li.modelcourse > a:focus,
+.nav > li.modelcourse > a:hover,
+.nav > li.modelcourse > a.active {
+    box-shadow: 0 6px 3px -3px #599AA6,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #599AA6,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #599AA6,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.access > a {
+    background: url(../img/common/ico_access.png) 2px 5px no-repeat;
+}
+
+.nav > li.access > a:focus,
+.nav > li.access > a:hover,
+.nav > li.access > a.active {
+    box-shadow: 0 6px 3px -3px #9B5353,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #9B5353,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #9B5353,
+    0 6px 3px -3px #000;
+}
+
+.nav > li.flower > a {
+    background: url(../img/common/ico_flower.png) 8px 5px no-repeat;
+}
+
+.nav > li.flower > a:focus,
+.nav > li.flower > a:hover,
+.nav > li.flower > a.active {
+    box-shadow: 0 6px 3px -3px #E9B1B1,
+    0 6px 3px -3px #000;
+    -webkit-box-shadow: 0 6px 3px -3px #E9B1B1,
+    0 6px 3px -3px #000;
+    -moz-box-shadow: 0 6px 3px -3px #E9B1B1,
+    0 6px 3px -3px #000;
+}
+
+.nav > li > a > img {
+    max-width: none;
+}
+
+.nav > li.header_link {
+    display: none;
+}
+
+.nav > li.header_link > a {
+    background: url(../img/common/ico_access.png) 8px 5px no-repeat;
+}
+
+.nav > li.header_link > a:focus,
+.nav > li.header_link > a:hover {
+    border-bottom: #9B5353 solid 4px;
+}
+
+/*---------------------------メニューオープンボタン---------------------------*/
+
+.navbar .btn-navbar {
+    display: none;
+    float: right;
+    padding: 10px;
+    margin: 0 0 0 0;
+    color: #000;
+    font-size: 10px;
+    background-color: #ededed;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] {
+    background-color: #e5e5e5;
+}
+
+.navbar .btn-navbar .icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+}
+
+.navbar .btn-navbar .txt {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px 0 0;
+    line-height: 1;
+    font-weight: bold;
+
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+    margin-top: 6px;
+}
+
+/*---------------------------スライドパネル---------------------------*/
+
+.collapse {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.collapse.in {
+    height: auto;
+}
+
+/*------------------------------------------------------------------------
+1140px～
+------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1141px) {
+
+    .nav > li {
+        margin-right: -5px;
+    }
+
+    .nav > li.spot > a {
+        padding: 13px 20px 13px 60px;
+    }
+    
+    .nav > li.event > a {
+        padding: 13px 20px 13px 50px;
+    }
+
+    .nav > li.gourmet > a {
+        padding: 13px 12px 13px 50px
+    }
+
+    .nav > li.stay > a {
+        padding: 13px 20px 13px 65px;
+    }
+
+    .nav > li.access > a {
+        padding: 13px 12px 13px 37px;
+    }
+
+	.nav > li.modelcourse > a{
+	    padding: 13px 15px 13px 50px;
+	}
+
+}
+
+/*------------------------------------------------------------------------
+960～1280px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1140px) {
+
+    .nav {
+        width: 86%;
+        display: table;
+        margin: 0 auto 0;
+    }
+
+    .nav > li {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 2px 0 0;
+        line-height: 1.35;
+        font-family: "游明朝", "YuMincho", "HG明朝E", "HG明朝B", "ＭＳ 明朝", "MS PMincho", serif;
+    }
+
+    .ie9 .nav > li {
+        line-height: 1.35;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif  !important;
+    }
+
+    @media all and (-ms-high-contrast: none) {
+        .nav > li {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0 2px 0 0;
+            line-height: 1.35;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+        }
+    }
+
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 30px 10px 10px 10px;
+        text-decoration: none;
+        border-bottom: #fff solid 4px;
+        background-size: auto 70% !important;
+        text-align: center !important;
+    }
+
+    .nav > li.naramachi > a {
+        background: url(../img/common/ico_naramachi.png) center top no-repeat;
+        padding: 40px 0 0 0;
+    }
+
+    .nav > li.temples > a {
+        background: url(../img/common/ico_temples.png) center top no-repeat;
+        padding: 40px 0 0 0;
+    }
+
+    .nav > li.spot > a {
+        background: url(../img/common/ico_spot.png) center top no-repeat;
+        padding: 40px 20px 0 20px;
+    }
+
+    .nav > li.event > a {
+        background: url(../img/common/ico_event.png) center top no-repeat;
+        padding: 40px 10px 0 10px;
+    }
+    
+    .nav > li.flower > a {
+        background: url(../img/common/ico_flower.png) center top no-repeat;
+        padding: 40px 20px 0 20px;
+    }
+
+    .nav > li.gourmet > a {
+        background: url(../img/common/ico_gourmet.png) center top no-repeat;
+        padding: 40px 0 0 0;
+    }
+
+    .nav > li.stay > a {
+        background: url(../img/common/ico_stay.png) center top no-repeat;
+        padding: 40px 0 0 0;
+    }
+
+    .nav > li.modelcourse > a {
+        background: url(../img/common/ico_modelcourse.png) center top no-repeat;
+        padding: 40px 2px 0 2px;
+    }
+
+    .nav > li.access > a {
+        background: url(../img/common/ico_access.png) center top no-repeat;
+        padding: 40px 0 0 0;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～960px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+
+    .nav > li {
+        padding: 0;
+    }
+
+    .nav > li.naramachi > a.active,
+    .nav > li.temples > a.active,
+    .nav > li.spot > a.active,
+    .nav > li.event > a.active,
+    .nav > li.flower > a.active,
+    .nav > li.gourmet > a.active,
+    .nav > li.stay > a.active,
+    .nav > li.modelcourse > a.active,
+    .nav > li.access > a.active {
+        background-color: #eee;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+
+}

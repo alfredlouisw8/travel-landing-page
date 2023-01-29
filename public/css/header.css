@@ -1,0 +1,474 @@
+/*------------------------------------------------------------------------
+ヘッダー
+------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------
+1141px ～
+------------------------------------------------------------------------*/
+
+body#spring header,
+body#summer header,
+body#autumn header,
+body#winter header{
+	position: relative;
+	width: 100%;
+	display: block;
+	z-index: 2000;
+	padding: 0;
+	margin: 0;
+	font-size: 1.1em;
+	border-bottom: rgba(204, 204, 204, 0.4) solid 0;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+body#spring header {
+	background: #FCF3F4 url(../img/common/header_spring.png) no-repeat top center;
+}
+body#summer header {
+	background: #eff9ff url(../img/common/header_summer.png) no-repeat top center;
+}
+body#autumn header {
+	background: #FFF8E9 url(../img/common/header_autumn.png) no-repeat top center;
+}
+body#winter header {
+	background: #ECDDF5 url(../img/common/header_winter.png) no-repeat top center;
+}
+
+
+header h1 {
+	width: 410px;
+    height: 60px;
+    margin: 5px 15px 10px 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    text-indent: 100%;
+}
+
+body#spring header h1 a,
+body#summer header h1 a,
+body#autumn header h1 a,
+body#winter header h1 a{
+	display: block;
+	height: 0;
+	padding: 64px 0 0 0;
+}
+body#spring header h1 a {
+	background: url(../img/spring/sitelogo_spring.png) 0 6px no-repeat;
+	background-size: auto 58px;
+}
+body#summer header h1 a {
+	background: url(../img/summer/sitelogo_summer.png) 0 6px no-repeat;
+	background-size: auto 58px;
+}
+body#autumn header h1 a {
+	background: url(../img/autumn/sitelogo_autumn.png) 0 6px no-repeat;
+	background-size: auto 58px;
+}
+body#winter header h1 a {
+	background: url(../img/winter/sitelogo_winter.png) 0 6px no-repeat;
+	background-size: auto 58px;
+}
+
+
+#hlink_contact {
+    max-width: 23%;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+#hlink_contact ul {
+    display: table;
+    position: relative;
+    padding: 0;
+    margin: 4px 10px 0 0;
+    list-style: none;
+    text-align: right;
+    float: right;
+}
+#hlink_contact ul + ul {
+    margin: 2px 10px 0 0;
+}
+#hlink_contact ul li {
+    display: table-cell;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+body#spring #hlink_contact .bizbtn a,
+body#summer #hlink_contact .bizbtn a,
+body#autumn #hlink_contact .bizbtn a,
+body#winter #hlink_contact .bizbtn a{
+	margin: 0 5px 0 0;
+	padding: 0.6em 0.9em 0.6em 1.8em;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	font-size: 0.8em;
+	line-height: 1em;
+	border: 1px solid #CCC;
+}
+
+body#spring #hlink_contact .bizbtn a {
+	color: #353535;
+	background: #FEFAFB url(../img/common/ico_bizbtn_arrow.png) no-repeat 10px center;
+}
+
+body#summer #hlink_contact .bizbtn a {
+	color: #353535;
+	background: #fff url(../img/common/ico_bizbtn_arrow.png) no-repeat 10px center;
+}
+body#autumn #hlink_contact .bizbtn a {
+	color: #353535;
+	background: #fff url(../img/common/ico_bizbtn_arrow.png) no-repeat 10px center;
+}
+body#winter #hlink_contact .bizbtn a {
+	color: #FFF;
+	background: #BE90D7 url(../img/common/ico_btn_arrow.png) no-repeat 10px center;
+}
+
+
+
+body#spring #hlink_contact .bizbtn a:hover {
+    color: #353535;
+    background-color: #ccc;
+}
+body#summer #hlink_contact .bizbtn a:hover {
+    color: #353535;
+    background-color: #ccc;
+}
+body#autumn #hlink_contact .bizbtn a:hover {
+    color: #353535;
+    background-color: #ccc;
+}
+body#winter #hlink_contact .bizbtn a:hover {
+    color: #FFF;
+    background-color: #875AA4;
+}
+
+
+
+#hlink_contact .searchbox {
+    padding: 0;
+    margin: -2px 5px 0 0;
+}
+
+#hlink_contact .subttl {
+
+    padding: 0;
+    margin: 3px 10px 10px 0;
+    float: right;
+    font-size: 0.9em;
+}
+
+/* Googleカスタム検索用 */
+#googleserch {
+				width: 140px;
+				display: block;
+				
+				
+}
+.searchbox,
+#googleserch .gsc-search-box{
+    height: 33px; 
+				margin: 0;
+				padding: 0;
+}
+
+#googleserch .gsc-search-button,
+#googleserch .gsc-clear-button {
+				display: none;
+}
+.rounded {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+#googleserch .gsc-input input[type=text]{
+    width: 133px;
+    padding: 0.35em 7px;
+    margin: 3px;
+    font-size: 12px;
+    border: 1px solid #ccc ;
+	   border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#googleserch .gsc-search-box td.gsc-input {		
+	    padding-right: 0 !important;
+}
+
+#googleserch .gsib_a {
+    padding: 1px 8px 1px 8px;
+}
+
+
+
+/* Googleカスタム検索用 sp用 */
+#googleserch_sp {
+	padding: 0.75em 1em;
+	background: #ddd;
+}
+.searchbox,
+#googleserch_sp .gsc-search-box{
+				margin: 0;
+				padding: 0;
+}
+
+#googleserch_sp .gsc-search-button,
+#googleserch_sp .gsc-clear-button {
+				display: none;
+}
+.rounded {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+#googleserch_sp .gsc-input input[type=text]{
+
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    display: block;
+}
+
+#googleserch_sp .gsc-search-box td.gsc-input {		
+	    padding-right: 0 !important;
+}
+
+
+#hlink_contact ul li.store a{
+	background: #595757 url(../img/common/ico_reserve_w.png) no-repeat left center;
+	background-size: contain;
+	color: #fff;
+	font-size: 0.8em;
+	text-decoration: none;
+	padding: 6px 8px 6px 27px;
+	margin: 0 0 0 5px;
+}
+
+#hlink_contact ul li.store a:hover{
+	color: #fff;
+	background: #7c7c7c url(../img/common/ico_reserve_w.png) no-repeat left center;
+	background-size: contain;
+}
+#hlink_contact ul li.textbox{
+	width: 100%;
+	display: block;
+}
+
+
+/*------------------------------------------------------------------------
+1141px～
+------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1141px) {
+
+    #hlink_contact ul li {
+
+    }
+    
+
+}
+
+/*------------------------------------------------------------------------
+～1140px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1140px) {
+
+    header {
+        background: #FCF3F4 none;
+    }
+
+    header h1 {
+        float: left;
+        margin: 12px 0 0 0
+    }
+
+    #hlink_contact {
+        max-width: 50%;
+        padding: 0;
+        margin: 6px 0 8px;
+        float: right;
+    }
+
+    #hlink_contact ul {
+        margin: 7px 0 0 0;
+    }
+    #hlink_contact ul + ul {
+	    margin: 0 0 2px;
+	}
+    
+    #hlink_contact ul li {
+        margin: 0;
+        float: left;
+    }
+	#hlink_contact .searchbox {
+	    padding: 0;
+	    margin: -3px 0px 0 0;
+    }
+
+    #hlink_contact .subttl {
+        margin: 10px 0 0 0;
+        font-size: 0.9em;
+
+    }
+    #googleserch {
+    	width: 115px;
+    }
+    #hlink_contact .gsc-input-box {
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    border-top-left-radius: 0;
+	    border-bottom-left-radius: 0;
+	}
+
+}
+
+
+@media screen and (max-width: 1090px) {
+
+    #hlink_contact {
+        max-width: 52%;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～1000px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+
+    header h1 {
+        width: 410px;
+        height: auto;
+        margin: 8px 0;
+        padding: 0;
+        float: none;
+    }
+
+    #hlink_contact {
+        display: none;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～680px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 680px) {
+
+    .navbar .btn-navbar {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 14px;
+    }
+
+    header h1 {
+        width: auto;
+        margin: 10px 0;
+        max-width: 334px;
+        max-height: 47px;
+    }
+
+    body#spring header h1 a {
+        display: block;
+        height: 0;
+        padding: 14% 0 0 0;
+        background: url(../img/spring/sitelogo_spring.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+
+    body#summer header h1 a {
+        display: block;
+        height: 0;
+        padding: 14% 0 0 0;
+        background: url(../img/summer/sitelogo_summer.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+    body#autumn header h1 a {
+        display: block;
+        height: 0;
+        padding: 14% 0 0 0;
+        background: url(../img/autumn/sitelogo_autumn.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+    body#winter header h1 a {
+        display: block;
+        height: 0;
+        padding: 14% 0 0 0;
+        background: url(../img/winter/sitelogo_winter.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～480px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+    header {
+        height: 72px;
+    }
+
+    body#spring header h1 a {
+        display: block;
+        height: 0;
+        padding: 11% 0 0 0;
+        background: url(../img/spring/sitelogo_spring.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+
+    body#summer header h1 a {
+        display: block;
+        height: 0;
+        padding: 11% 0 0 0;
+		margin:8px 0 0 0 ;
+        background: url(../img/summer/sitelogo_summer.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+    body#autumn header h1 a {
+        display: block;
+        height: 0;
+        padding: 11% 0 0 0;
+		margin:8px 0 0 0 ;
+        background: url(../img/autumn/sitelogo_autumn.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+    body#winter header h1 a {
+        display: block;
+        height: 0;
+        padding: 11% 0 0 0;
+		margin:8px 0 0 0 ;
+        background: url(../img/winter/sitelogo_winter.png) 0 center no-repeat;
+        background-size: auto 100%;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～320px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 320px) {
+    .navbar .btn-navbar {
+        top: 10px;
+    }
+
+}

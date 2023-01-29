@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			洞川温泉センター｜奈良県観光[公式サイト] あをによし
+			なら旅ネット｜天川村｜吉野路エリア｜温泉｜温泉・宿泊
+		</title>
+		<link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
+
+		<link
+			rel="stylesheet"
+			href="https://yamatoji.nara-kankou.or.jp/css/contents.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://yamatoji.nara-kankou.or.jp/css/footer.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://yamatoji.nara-kankou.or.jp/css/header.css"
+		/>
+		<link rel="stylesheet" href="%PUBLIC_URL%/fonts/style.css" />
+		<!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -22,13 +36,344 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>AKO MAG - 赤穂マガジン | 観光 移住 グルメ物産のオススメ情報を発信</title>
-</head>
+	</head>
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
+	<body id="winter">
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<header class="clearfix" id="header">
+			<div class="wrapper clearfix">
+				<aside class="clearfix" id="hlink_contact">
+					<ul>
+						<li class="bizbtn"><a href="/business/">法人の方へ</a></li>
+						<li class="bizbtn">
+							<a
+								href="https://www.visitnara.jp/"
+								target="_blank"
+								onclick="ga('send', 'event', '外国語サイトボタン', 'PC', 'English');"
+								>English</a
+							>
+						</li>
+						<li class="searchbox">
+							<div id="googleserch">
+								<div id="___gcse_0">
+									<div
+										class="gsc-control-searchbox-only gsc-control-searchbox-only-ja"
+										dir="ltr"
+									>
+										<form
+											class="gsc-search-box gsc-search-box-tools"
+											accept-charset="utf-8"
+										>
+											<table
+												cellspacing="0"
+												cellpadding="0"
+												role="presentation"
+												class="gsc-search-box"
+												style="width: 100%"
+											>
+												<tbody>
+													<tr>
+														<td class="gsc-input">
+															<div
+																class="gsc-input-box"
+																id="gsc-iw-id1"
+																style="border: 1px solid #bbb; background: #fff"
+															>
+																<table
+																	cellspacing="0"
+																	cellpadding="0"
+																	role="presentation"
+																	id="gs_id50"
+																	class="gstl_50 gsc-input"
+																	style="width: 100%; padding: 0px"
+																>
+																	<tbody>
+																		<tr>
+																			<td id="gs_tti50" class="gsib_a">
+																				<input
+																					autocomplete="off"
+																					type="text"
+																					size="10"
+																					class="gsc-input"
+																					name="search"
+																					title="検索"
+																					aria-label="検索"
+																					id="gsc-i-id1"
+																					dir="ltr"
+																					spellcheck="false"
+																					style="
+																						width: 100%;
+																						padding: 0px;
+																						border: none;
+																						margin: 0px;
+																						height: auto;
+																						background: url('https://www.google.com/cse/static/images/1x/ja/branding.png')
+																							left center no-repeat
+																							rgb(255, 255, 255);
+																						outline: none;
+																					"
+																				/>
+																			</td>
+																			<td class="gsib_b">
+																				<div
+																					class="gsst_b"
+																					id="gs_st50"
+																					dir="ltr"
+																				>
+																					<a
+																						class="gsst_a"
+																						href="javascript:void(0)"
+																						title="検索ボックスをクリア"
+																						role="button"
+																						style="display: none"
+																						><span
+																							class="gscb_a"
+																							id="gs_cb50"
+																							aria-hidden="true"
+																							>×</span
+																						></a
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</td>
+														<td class="gsc-search-button">
+															<button
+																class="gsc-search-button gsc-search-button-v2"
+															>
+																<svg width="13" height="13" viewBox="0 0 13 13">
+																	<title>検索</title>
+																	<path
+																		d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"
+																	></path>
+																</svg>
+															</button>
+														</td>
+														<td class="gsc-clear-button">
+															<div
+																class="gsc-clear-button"
+																title="結果をクリア"
+															>
+																&nbsp;
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</form>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="store">
+							<a
+								href="/Nara/"
+								onclick="ga('send', 'event', 'ヘッダーメニュー', 'TXJ連携', '予約・購入ページはこちら(PC)');"
+								>オンラインストア</a
+							>
+						</li>
+					</ul>
+					<ul>
+						<li class="textbox">
+							<ul id="textsize">
+								<p>文字サイズ</p>
+								<li>
+									<a href="javascript:void(0)" data-mode="f1" class="textsize"
+										>小</a
+									>
+								</li>
+								<li>
+									<a href="javascript:void(0)" data-mode="f2" class="textsize"
+										>中</a
+									>
+								</li>
+								<li>
+									<a href="javascript:void(0)" data-mode="f3" class="textsize"
+										>大</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+				<h1><a href="/">奈良県観光[公式サイト] あをによし なら旅ネット</a></h1>
+			</div>
+
+			<nav>
+				<div class="navbar navbar-fixed-top">
+					<div class="navbar-inner">
+						<button
+							type="button"
+							class="btn-navbar collapsed"
+							data-toggle="collapse"
+							data-target=".nav-collapse"
+							style="top: 7px"
+						>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="txt">メニュー</span>
+						</button>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li class="temples"><a href="/001shaji/">神社・仏閣</a></li>
+								<li class="spot"><a href="/002kanko/">観光</a></li>
+								<li class="event"><a href="/003events/">イベント・体験</a></li>
+								<li class="flower"><a href="/023flower_spot/">花</a></li>
+								<li class="modelcourse">
+									<a href="/006course/">モデルコース</a>
+								</li>
+								<li class="gourmet"><a href="/004shop/">グルメ・買う</a></li>
+								<li class="stay"><a href="/005onsen-yado/">温泉・宿泊</a></li>
+								<li class="access"><a href="/access/">奈良へのアクセス</a></li>
+								<li class="header_link"><a href="/business/">法人の方へ</a></li>
+								<li class="header_link">
+									<a
+										href="https://www.visitnara.jp/"
+										target="_blank"
+										onclick="ga('send', 'event', '外国語サイトボタン', 'SP', 'English');"
+										>English</a
+									>
+								</li>
+								<li class="header_link store">
+									<a
+										href="/Nara/"
+										onclick="ga('send', 'event', 'ヘッダーメニュー', 'TXJ連携', '予約・購入ページはこちら(SP)');"
+										>オンラインストア</a
+									>
+								</li>
+								<li class="header_link" id="googleserch_sp">
+									<div id="___gcse_1">
+										<div
+											class="gsc-control-searchbox-only gsc-control-searchbox-only-ja"
+											dir="ltr"
+										>
+											<form
+												class="gsc-search-box gsc-search-box-tools"
+												accept-charset="utf-8"
+											>
+												<table
+													cellspacing="0"
+													cellpadding="0"
+													role="presentation"
+													class="gsc-search-box"
+													style="width: 100%"
+												>
+													<tbody>
+														<tr>
+															<td class="gsc-input">
+																<div
+																	class="gsc-input-box"
+																	id="gsc-iw-id2"
+																	style="
+																		border: 1px solid #bbb;
+																		background: #fff;
+																	"
+																>
+																	<table
+																		cellspacing="0"
+																		cellpadding="0"
+																		role="presentation"
+																		id="gs_id51"
+																		class="gstl_51 gsc-input"
+																		style="width: 100%; padding: 0px"
+																	>
+																		<tbody>
+																			<tr>
+																				<td id="gs_tti51" class="gsib_a">
+																					<input
+																						autocomplete="off"
+																						type="text"
+																						size="10"
+																						class="gsc-input"
+																						name="search"
+																						title="検索"
+																						aria-label="検索"
+																						id="gsc-i-id2"
+																						dir="ltr"
+																						spellcheck="false"
+																						style="
+																							width: 100%;
+																							padding: 0px;
+																							border: none;
+																							margin: 0px;
+																							height: auto;
+																							background: url('https://www.google.com/cse/static/images/1x/ja/branding.png')
+																								left center no-repeat
+																								rgb(255, 255, 255);
+																							outline: none;
+																						"
+																					/>
+																				</td>
+																				<td class="gsib_b">
+																					<div
+																						class="gsst_b"
+																						id="gs_st51"
+																						dir="ltr"
+																					>
+																						<a
+																							class="gsst_a"
+																							href="javascript:void(0)"
+																							title="検索ボックスをクリア"
+																							role="button"
+																							style="display: none"
+																							><span
+																								class="gscb_a"
+																								id="gs_cb51"
+																								aria-hidden="true"
+																								>×</span
+																							></a
+																						>
+																					</div>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</td>
+															<td class="gsc-search-button">
+																<button
+																	class="gsc-search-button gsc-search-button-v2"
+																>
+																	<svg
+																		width="13"
+																		height="13"
+																		viewBox="0 0 13 13"
+																	>
+																		<title>検索</title>
+																		<path
+																			d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"
+																		></path>
+																	</svg>
+																</button>
+															</td>
+															<td class="gsc-clear-button">
+																<div
+																	class="gsc-clear-button"
+																	title="結果をクリア"
+																>
+																	&nbsp;
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</form>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div id="root"></div>
+		<!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -38,6 +383,294 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-</body>
 
+		<footer>
+			<div>
+				<div class="wrapper clearfix" id="directorynav">
+					<div class="flex">
+						<div class="menulist">
+							<h3 class="mds_link">
+								<a
+									class="LT-14"
+									href="https://yamatoji.nara-kankou.or.jp/welcome/"
+									>ようこそ奈良へ</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-13"
+									href="https://yamatoji.nara-kankou.or.jp/access/"
+									>奈良へのアクセス</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-16"
+									href="https://yamatoji.nara-kankou.or.jp/015guidebook_indivudual/"
+									>観光ガイドブック</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-34"
+									href="https://yamatoji.nara-kankou.or.jp/024guidebook_business/?keyword=ml1n84yfrj"
+									>修学旅行ガイドブック</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a class="LT-17" href="https://yamatoji.nara-kankou.or.jp/app/"
+									>奈良県観光公式アプリ</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-18"
+									href="http://fanclub.nara-kankou.or.jp/pages/yamatoji-cal/"
+									target="_blank"
+									>奈良大和路カレンダー</a
+								>
+							</h3>
+						</div>
+						<div class="menulist">
+							<h3 class="mds_link">
+								<a
+									class="LT-6"
+									href="https://yamatoji.nara-kankou.or.jp/001shaji/"
+									>神社・仏閣</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-7"
+									href="https://yamatoji.nara-kankou.or.jp/002kanko/"
+									>観光</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-8"
+									href="https://yamatoji.nara-kankou.or.jp/003events/"
+									>イベント</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-9"
+									href="https://yamatoji.nara-kankou.or.jp/023flower_spot/"
+									>花</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-10"
+									href="https://yamatoji.nara-kankou.or.jp/006course/"
+									>モデルコース</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-11"
+									href="https://yamatoji.nara-kankou.or.jp/004shop/"
+									>グルメ・お土産</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-12"
+									href="https://yamatoji.nara-kankou.or.jp/005onsen-yado/"
+									>温泉・宿泊</a
+								>
+							</h3>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="menulist">
+							<h3 class="mds_link">
+								<a
+									class="LT-19"
+									href="https://yamatoji.nara-kankou.or.jp/topics/"
+									>お知らせ</a
+								>
+							</h3>
+							<h3 class="mds_link">
+								<a
+									class="LT-1"
+									href="https://yamatoji.nara-kankou.or.jp/business/"
+									>法人の方へ</a
+								>
+							</h3>
+							<ul class="direct_link">
+								<li>
+									<a
+										class="LT-20"
+										href="https://yamatoji.nara-kankou.or.jp/018img_delivery_user/"
+										>ストックフォトライブラリー</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-21"
+										href="https://yamatoji.nara-kankou.or.jp/019film_c-nara/"
+										>フィルムコミッション</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-22"
+										href="https://yamatoji.nara-kankou.or.jp/020movie/"
+										>奈良にゆかりの映画情報</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="menulist">
+							<h3 class="mds_link">
+								<a
+									class="LT-23"
+									href="javascript:void(0);"
+									style="cursor: default"
+									>おすすめリンク</a
+								>
+							</h3>
+							<ul class="direct_link">
+								<li>
+									<a
+										class="LT-24"
+										href="https://yamatoji.nara-kankou.or.jp/008world/"
+										>奈良大和路の世界遺産</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-25"
+										href="https://yamatoji.nara-kankou.or.jp/season/"
+										>四季のおすすめスポット</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-26"
+										href="https://yamatoji.nara-kankou.or.jp/014toiawase/"
+										>観光についてのお問合わせ先</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-27"
+										href="https://yamatoji.nara-kankou.or.jp/013kouyo/"
+										>奈良大和路からの紅葉だより</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-28"
+										href="https://yamatoji.nara-kankou.or.jp/012sakura/"
+										>奈良大和路からの桜だより</a
+									>
+								</li>
+								<li>
+									<a
+										class="LT-29"
+										href="https://yamatoji.nara-kankou.or.jp/011wedding/"
+										>あをによし奈良　和婚</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper">
+					<aside id="bnr">
+						<ul class="clearfix">
+							<li>
+								<a href="http://fanclub.nara-kankou.or.jp/" target="_blank"
+									><img
+										src="https://yamatoji.nara-kankou.or.jp/img/bnr/bnr_FC_2021.jpg"
+										alt="奈良ファン倶楽部"
+								/></a>
+							</li>
+							<li>
+								<a href="https://yamatoji.nara-kankou.or.jp/app/"
+									><img
+										src="https://yamatoji.nara-kankou.or.jp/img/bnr/bnr_app.jpg"
+										alt="奈良県観光公式アプリ"
+										style="opacity: 1"
+								/></a>
+							</li>
+						</ul>
+					</aside>
+				</div>
+				<ul class="linklist">
+					<li>
+						<a
+							class="LT-30"
+							href="https://yamatoji.nara-kankou.or.jp/sitemap.html"
+							>サイトマップ</a
+						>
+					</li>
+					<li>
+						<a
+							class="LT-31"
+							href="https://yamatoji.nara-kankou.or.jp/privacy.html"
+							>サイトポリシー</a
+						>
+					</li>
+					<li>
+						<a
+							class="LT-32"
+							href="https://yamatoji.nara-kankou.or.jp/link_banner.html"
+							>リンクについて</a
+						>
+					</li>
+					<li>
+						<a
+							class="LT-33"
+							href="http://www.nara-kankou.or.jp/"
+							target="_blank"
+							>一般財団法人 奈良県ビジターズビューロー</a
+						>
+					</li>
+				</ul>
+				<div id="sitelogo_footer">
+					<a href="http://www.nara-kankou.or.jp/" target="_blank"
+						><img
+							src="https://yamatoji.nara-kankou.or.jp/img/common/sitelogo.png"
+							alt="一般財団法人 奈良県ビジターズビューロー"
+					/></a>
+					<p>(C) Nara visitors Bureau, All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="%PUBLIC_URL%/js/custom.js"></script>
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i["GoogleAnalyticsObject"] = r;
+				(i[r] =
+					i[r] ||
+					function () {
+						(i[r].q = i[r].q || []).push(arguments);
+					}),
+					(i[r].l = 1 * new Date());
+				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(
+				window,
+				document,
+				"script",
+				"//www.google-analytics.com/analytics.js",
+				"ga"
+			);
+
+			ga("create", "UA-12808082-1", "auto");
+			ga("send", "pageview");
+		</script>
+	</body>
 </html>

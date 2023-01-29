@@ -1,44 +1,44 @@
 .of-cover {
-  object-fit: cover;
-  object-position: center;
+	object-fit: cover;
+	object-position: center;
 }
 
 .f-11px {
-  font-size: 11px;
+	font-size: 11px;
 }
 
 .position-sticky {
-  position: sticky;
-  top: 0;
+	position: sticky;
+	top: 0;
 }
 
 .modal-header {
-  border-bottom: none !important;
-  padding-bottom: 0;
+	border-bottom: none !important;
+	padding-bottom: 0;
 }
 
 .modal-footer {
-  border-top: none !important;
+	border-top: none !important;
 }
 
 .react-calendar {
-  width: 200px;
-  position: absolute;
+	width: 200px;
+	position: absolute;
 
-  &.hide {
-    display: none;
-  }
+	&.hide {
+		display: none;
+	}
 }
 
 .react-calendar__navigation button {
-  min-width: 24px;
+	min-width: 24px;
 }
 
 .react-calendar__tile {
-  line-height: 10px;
+	line-height: 10px;
 }
 
 .form-control[readonly] {
-  background-color: white;
-  cursor: pointer;
+	background-color: white;
+	cursor: pointer;
 }

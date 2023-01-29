@@ -1,170 +1,170 @@
 @import "../../assets/styles/variables";
 
 .products {
-  position: relative;
-  margin-top: -3.5rem;
+	position: relative;
+	margin-top: -3.5rem;
 
-  .reset {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+	.reset {
+		text-decoration: underline;
+		cursor: pointer;
+	}
 
-  .floatingText {
-    position: sticky;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 60px;
+	.floatingText {
+		position: sticky;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 60px;
 
-    .text {
-      padding: 2.5rem 0.5rem;
-      background-color: $primary;
-      font-weight: bold;
-      writing-mode: vertical-rl;
-      border-bottom-right-radius: 1.25rem;
-      font-size: 1.75rem;
-      min-height: 190px;
-      text-align: center;
-    }
+		.text {
+			padding: 2.5rem 0.5rem;
+			background: var(--primary);
+			font-weight: bold;
+			writing-mode: vertical-rl;
+			border-bottom-right-radius: 1.25rem;
+			font-size: 1.75rem;
+			min-height: 190px;
+			text-align: center;
+		}
 
-    @include breakpoint(untilTablet) {
-      position: static;
-      width: max-content;
+		@include breakpoint(untilTablet) {
+			position: static;
+			width: max-content;
 
-      .text {
-        writing-mode: horizontal-tb;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        min-height: 0;
-      }
-    }
-  }
+			.text {
+				writing-mode: horizontal-tb;
+				padding: 1rem 2rem;
+				font-size: 1rem;
+				min-height: 0;
+			}
+		}
+	}
 
-  >.container {
-    margin-top: -7rem;
+	> .container {
+		margin-top: -7rem;
 
-    @include breakpoint(untilTablet) {
-      margin-top: 1rem;
-    }
-  }
+		@include breakpoint(untilTablet) {
+			margin-top: 1rem;
+		}
+	}
 
-  .productsWrapper,
-  .skeletonWrapper {
-    width: 90%;
-    margin: auto;
+	.productsWrapper,
+	.skeletonWrapper {
+		width: 90%;
+		margin: auto;
 
-    @include breakpoint(untilTablet) {
-      width: 100%;
-      margin-top: 1rem;
-    }
-  }
+		@include breakpoint(untilTablet) {
+			width: 100%;
+			margin-top: 1rem;
+		}
+	}
 
-  .titlePage {
-    text-align: center;
-    padding: 0.5rem 1rem;
-    background-color: $primary;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    border-radius: 1.25rem 1.25rem 0 0;
+	.titlePage {
+		text-align: center;
+		padding: 0.5rem 1rem;
+		background: var(--primary);
+		font-size: 1.5rem;
+		color: white;
+		font-weight: bold;
+		margin-bottom: 2rem;
+		border-radius: 1.25rem 1.25rem 0 0;
 
-    @include breakpoint(untilTablet) {
-      font-size: 1.25rem;
-    }
-  }
+		@include breakpoint(untilTablet) {
+			font-size: 1.25rem;
+		}
+	}
 
-  .productsOption {
-    .sort {
-      width: 250px;
-      display: flex;
-      align-items: center;
+	.productsOption {
+		.sort {
+			width: 250px;
+			display: flex;
+			align-items: center;
 
-      .text {
-        white-space: nowrap;
-        margin-right: 1rem;
-      }
-    }
-  }
+			.text {
+				white-space: nowrap;
+				margin-right: 1rem;
+			}
+		}
+	}
 
-  .productItems {
-    .item {
-      margin-bottom: 2rem;
-      border: 1px solid #f1efef;
-      padding: 1rem;
-      border-radius: 1.25rem 0 1.25rem 0;
+	.productItems {
+		.item {
+			margin-bottom: 2rem;
+			border: 1px solid #f1efef;
+			padding: 1rem;
+			border-radius: 1.25rem;
 
-      .image {
-        margin: -1rem;
-        margin-bottom: 0.5rem;
-        cursor: pointer;
+			.image {
+				margin: -1rem;
+				margin-bottom: 0.5rem;
+				cursor: pointer;
 
-        img {
-          width: 100%;
-          height: 180px;
-          object-fit: cover;
-          border-top-left-radius: 1.25rem;
-        }
-      }
+				img {
+					width: 100%;
+					height: 180px;
+					object-fit: cover;
+					border-top-left-radius: 1.25rem;
+				}
+			}
 
-      .title,
-      .address,
-      .price,
-      .desc {
-        margin-bottom: 0.5rem;
-      }
+			.title,
+			.address,
+			.price,
+			.desc {
+				margin-bottom: 0.5rem;
+			}
 
-      @include breakpoint(laptop) {
-        .info {
-          min-height: 170px;
-        }
-      }
+			@include breakpoint(laptop) {
+				.info {
+					min-height: 170px;
+				}
+			}
 
-      .address {
-        color: rgb(105, 105, 105);
-        font-weight: 500;
-      }
+			.address {
+				color: rgb(105, 105, 105);
+				font-weight: 500;
+			}
 
-      .title,
-      .desc {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-      }
+			.title,
+			.desc {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
 
-      .desc {
+			.desc {
+				div,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				p {
+					font-size: 14px !important;
+				}
+			}
 
-        div,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-          font-size: 14px !important;
-        }
-      }
+			.buttonWrapper {
+				margin: -1rem;
+				margin-top: 0;
+				padding-top: 0.5rem;
 
-      .buttonWrapper {
-        margin: -1rem;
-        margin-top: 0;
-        padding-top: 0.5rem;
+				.btn {
+					border-radius: 0 0 1.25rem 0;
+				}
+			}
 
-        .btn {
-          border-radius: 0 0 1.25rem 0;
-        }
-      }
+			.title {
+				font-weight: bold;
+				-webkit-line-clamp: 1;
+			}
 
-      .title {
-        font-weight: bold;
-        -webkit-line-clamp: 1;
-      }
-
-      .btn {
-        font-weight: bold;
-      }
-    }
-  }
+			.btn {
+				font-weight: bold;
+			}
+		}
+	}
 }

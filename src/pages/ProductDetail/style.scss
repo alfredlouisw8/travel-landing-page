@@ -1,222 +1,224 @@
 @import "../../assets/styles/variables";
 
 .container {
-  padding: 5vh 1rem;
+	padding: 5vh 1rem;
 
-  .slick-slide img {
-    margin: auto;
-  }
+	.slick-slide img {
+		margin: auto;
+	}
 
-  .back {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    display: block;
+	.back {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		display: block;
 
-    @include breakpoint(untilTablet) {
-      font-size: 0.85rem;
-    }
-  }
+		@include breakpoint(untilTablet) {
+			font-size: 0.85rem;
+		}
+	}
 
-  .product {
-    border: 8px solid $primary;
-    border-radius: 0 0 1.25rem 1.25rem;
+	.product {
+		border: 8px solid var(--primary);
+		border-radius: 0 0 1.25rem 1.25rem;
 
-    .skeletonWrapper {
-      padding: 2rem;
-    }
+		.skeletonWrapper {
+			padding: 2rem;
+		}
 
-    .productWrapper {
-      padding: 2rem;
-      padding-top: 0;
+		.productWrapper {
+			padding: 2rem;
+			padding-top: 0;
 
-      .serviceType {
-        margin-left: -2.25rem;
-        margin-top: -0.25rem;
-        padding: 0.5rem 2rem;
-        padding-bottom: 0.75rem;
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-        border-bottom-right-radius: 1.25rem;
-        background-color: $primary;
-        font-weight: bold;
-        display: inline-block;
-      }
+			.serviceType {
+				margin-left: -2.25rem;
+				margin-top: -0.25rem;
+				padding: 0.5rem 2rem;
+				padding-bottom: 0.75rem;
+				font-size: 1.25rem;
+				margin-bottom: 1.5rem;
+				border-bottom-right-radius: 1.25rem;
+				background: var(--primary);
+				color: #fff;
+				font-weight: bold;
+				display: inline-block;
+			}
 
-      @include breakpoint(untilTablet) {
-        .serviceType {
-          font-size: 1rem;
-          margin-left: -1rem;
-          padding-left: 1rem;
-        }
-      }
+			@include breakpoint(untilTablet) {
+				.serviceType {
+					font-size: 1rem;
+					margin-left: -1rem;
+					padding-left: 1rem;
+				}
+			}
 
-      .title {
-        text-align: center;
-      }
+			.title {
+				text-align: center;
+			}
 
-      .carousel {
-        text-align: center;
-        margin: 2rem 0;
-        margin-bottom: 4rem;
+			.carousel {
+				text-align: center;
+				margin: 2rem 0;
+				margin-bottom: 4rem;
 
-        >img {
-          max-height: 400px;
-          width: auto;
-        }
+				> img {
+					max-height: 400px;
+					width: auto;
+				}
 
-        @include breakpoint(untilTablet) {
-          >img {
-            width: 100%;
-          }
-        }
+				@include breakpoint(untilTablet) {
+					> img {
+						width: 100%;
+					}
+				}
 
-        .slick-dots {
-          bottom: -40px;
-        }
+				.slick-dots {
+					bottom: -40px;
+				}
 
-        .image {
-          max-height: 300px;
-          width: auto;
-        }
+				.image {
+					max-height: 300px;
+					width: auto;
+				}
 
-        .slider-nav {
-          .slick-track {
-            justify-content: center;
-          }
+				.slider-nav {
+					.slick-track {
+						justify-content: center;
+					}
 
-          .slick-slide {
-            height: 50px;
-            width: 50px !important;
+					.slick-slide {
+						height: 50px;
+						width: 50px !important;
 
-            >div {
-              height: 50px;
-              width: 50px;
-            }
+						> div {
+							height: 50px;
+							width: 50px;
+						}
 
-            img {
-              max-height: 50px;
-              width: 50px;
-              object-fit: cover;
-            }
-          }
-        }
-      }
+						img {
+							max-height: 50px;
+							width: 50px;
+							object-fit: cover;
+						}
+					}
+				}
+			}
 
-      .checkPrice {
-        padding: 1rem;
-        border: 2px solid lightgray;
+			.checkPrice {
+				padding: 1rem;
+				border: 2px solid lightgray;
 
-        h4 {
-          margin-bottom: 1rem;
-        }
+				h4 {
+					margin-bottom: 1rem;
+				}
 
-        .formCategories {
-          position: relative;
+				.formCategories {
+					position: relative;
 
-          .icon {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-          }
+					.icon {
+						position: absolute;
+						left: 1rem;
+						top: 50%;
+						transform: translateY(-50%);
+					}
 
-          select {
-            padding: 0.75rem 3rem;
-            font-weight: bold;
-          }
-        }
+					select {
+						padding: 0.75rem 3rem;
+						font-weight: bold;
+					}
+				}
 
-        .btn {
-          font-size: 1.15rem;
-          padding: 0.5rem 2rem;
+				.btn {
+					font-size: 1.15rem;
+					padding: 0.5rem 2rem;
 
-          @include breakpoint(untilTablet) {
-            height: 100%;
-            font-size: 1rem;
-            padding: 1.5rem;
-          }
-        }
+					@include breakpoint(untilTablet) {
+						height: 100%;
+						font-size: 1rem;
+						padding: 1.5rem;
+					}
+				}
 
-        .formDate {
-          margin-right: 0.5rem;
-          max-width: 300px;
+				.formDate {
+					margin-right: 0.5rem;
+					max-width: 300px;
 
-          @include breakpoint(untilTablet) {
-            width: 100%;
-            margin-right: 12px;
-          }
-        }
+					@include breakpoint(untilTablet) {
+						width: 100%;
+						margin-right: 12px;
+					}
+				}
 
-        .formIcon {
-          position: relative;
-          margin-right: 0.5rem;
-          max-width: 102px;
+				.formIcon {
+					position: relative;
+					margin-right: 0.5rem;
+					max-width: 102px;
 
-          .icon {
-            position: absolute;
-            left: 0.5rem;
-            top: 50%;
-            transform: translateY(-50%);
+					.icon {
+						position: absolute;
+						left: 0.5rem;
+						top: 50%;
+						transform: translateY(-50%);
 
-            img {
-              height: 20px;
-              width: auto;
-            }
-          }
+						img {
+							height: 20px;
+							width: auto;
+						}
+					}
 
-          @include breakpoint(untilTablet) {
-            margin-bottom: 0 !important;
-            max-width: 85px;
-          }
+					@include breakpoint(untilTablet) {
+						margin-bottom: 0 !important;
+						max-width: 85px;
+					}
 
-          input {
-            padding-left: 2rem;
-          }
-        }
-      }
+					input {
+						padding-left: 2rem;
+					}
+				}
+			}
 
-      .sectionTitle {
-        border-bottom: 3px solid $primary;
-        margin-bottom: 1rem;
+			.sectionTitle {
+				border-bottom: 3px solid var(--primary);
+				margin-bottom: 1rem;
+				color: #fff;
 
-        span {
-          background-color: $primary;
-          padding: 0.5rem 3rem;
-          padding-left: 1rem;
-          display: inline-block;
-          font-weight: bold;
-          border-top-right-radius: 1.25rem;
-          font-size: 1.25rem;
-        }
-      }
+				span {
+					background: var(--primary);
+					padding: 0.5rem 3rem;
+					padding-left: 1rem;
+					display: inline-block;
+					font-weight: bold;
+					border-top-right-radius: 1.25rem;
+					font-size: 1.25rem;
+				}
+			}
 
-      tr {
-        border-bottom: 1px solid grey;
+			tr {
+				border-bottom: 1px solid grey;
 
-        td {
-          padding: 1rem 0.5rem;
-        }
-      }
-    }
+				td {
+					padding: 1rem 0.5rem;
+				}
+			}
+		}
 
-    @include breakpoint(untilTablet) {
-      border-width: 4px;
+		@include breakpoint(untilTablet) {
+			border-width: 4px;
 
-      .skeletonWrapper,
-      .productWrapper {
-        padding: 1rem;
-      }
+			.skeletonWrapper,
+			.productWrapper {
+				padding: 1rem;
+			}
 
-      .productWrapper {
-        padding-top: 0;
+			.productWrapper {
+				padding-top: 0;
 
-        .carousel {
-          .image {
-            max-width: 100%;
-          }
-        }
-      }
-    }
-  }
+				.carousel {
+					.image {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
 }

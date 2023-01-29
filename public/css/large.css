@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+共通
+--------------------------------------------------------------*/
+
+.wrapper {
+	width: 86%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.pickup_slick {
+	width: 86%;
+	position: relative;
+}
+.prbanner_slick {
+	width: 86%;
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+ナビゲーション
+--------------------------------------------------------------*/
+
+#globalnav ul.menunav li {
+	font-size: 1em;
+}
+
+#globalnav ul.menunav li a span {
+	background: transparent url("../img/common/icon_osusume_arrow02.png") no-repeat 0 8px;
+	padding: 0 0 0 18px;
+}
+
+#globalnav ul.menunav li a.otherpage span {
+	background: transparent url("../img/common/icon_osusume_arrow01.png") no-repeat 0 4px;
+	padding: 0 0 0 14px;
+}
+
+/*--------------------------------------------------------------
+絞り込む
+--------------------------------------------------------------*/
+
+.date_box {
+	width:50%;
+}
+.month_box {
+	width:50%;
+}
+
+ul.osusume_search li a {
+	width: 48%;
+}
+
+ul.osusume_search li:nth-child(3) a {
+	border-top: 0px;
+}
+
+ul.osusume_search li:nth-child(3) a.top {
+	border-top: 0px;
+}
+
+
+/*--------------------------------------------------------------
+ストックフォト
+--------------------------------------------------------------*/

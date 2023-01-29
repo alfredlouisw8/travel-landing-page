@@ -1,0 +1,268 @@
+/*---------------------------グローバルメニュー---------------------------*/
+
+@media (min-width: 1001px) {
+    .nav-collapse.collapse {
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        *position: relative;
+        *z-index: 2;
+        margin-bottom: 0;
+        margin-top: 0;
+        overflow: visible;
+    }
+
+    .navbar-inner {
+        position: inherit;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        *zoom: 1;
+        box-shadow: none;
+    }
+
+    .navbar .container {
+        width: auto;
+        padding: 0;
+    }
+
+    .navbar-inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav-collapse {
+        clear: both;
+    }
+
+    /*--------グローバルメニュー--------*/
+    .nav-collapse .nav {
+        position: relative;
+        float: none;
+        margin: 0 0 0 0;
+        padding: 0;
+        border-top: 1px rgba(204, 204, 204, 0.5) solid;
+        height: auto;
+        width: 100%;
+    }
+
+    .nav-collapse .nav > li {
+        width: auto !important;
+        float: none;
+        display: block;
+    }
+
+    .nav-collapse .nav > li > a {
+        display: block;
+        position: relative;
+        padding: 15px 15px 15px 45px;
+        margin: 0;
+        color: #000;
+        letter-spacing: 0;
+        text-decoration: none;
+        text-align: left !important;
+        font-size: 1.2em;
+        line-height: 1;
+        border-bottom: #ddd solid 1px;
+        background: #fff;
+        background-size: auto 50% !important;
+    }
+
+    .nav > li.naramachi > a {
+        background: url(../img/common/ico_naramachi.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.naramachi > a:hover,
+    .nav-collapse .nav > li.naramachi > a:focus {
+        background: #ddd url(../img/common/ico_naramachi.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.temples > a {
+        background: url(../img/common/ico_temples.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.temples > a:hover,
+    .nav-collapse .nav > li.temples > a:focus {
+        background: #ddd url(../img/common/ico_temples.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.spot > a {
+        background: url(../img/common/ico_spot.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.spot > a:hover,
+    .nav-collapse .nav > li.spot > a:focus {
+        background: #ddd url(../img/common/ico_spot.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.event > a {
+        background: url(../img/common/ico_event.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.event > a:hover,
+    .nav-collapse .nav > li.event > a:focus {
+        background: #ddd url(../img/common/ico_event.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+    
+    .nav > li.flower > a {
+        background: url(../img/common/ico_flower.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.flower > a:hover,
+    .nav-collapse .nav > li.flower > a:focus {
+        background: #ddd url(../img/common/ico_flower.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.gourmet > a {
+        background: url(../img/common/ico_gourmet.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.gourmet > a:hover,
+    .nav-collapse .nav > li.gourmet > a:focus {
+        background: #ddd url(../img/common/ico_gourmet.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.stay > a {
+        background: url(../img/common/ico_stay.png) 9px 14px no-repeat;
+    }
+
+    .nav-collapse .nav > li.stay > a:hover,
+    .nav-collapse .nav > li.stay > a:focus {
+        background: #ddd url(../img/common/ico_stay.png) 5px 14px no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.modelcourse > a {
+        background: url(../img/common/ico_modelcourse.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.modelcourse > a:hover,
+    .nav-collapse .nav > li.modelcourse > a:focus {
+        background: #ddd url(../img/common/ico_modelcourse.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.access > a {
+        background: url(../img/common/ico_access.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.access > a:hover,
+    .nav-collapse .nav > li.access > a:focus {
+        background: #ddd url(../img/common/ico_access.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+
+    .nav > li.header_link > a {
+        background: url(../img/common/ico_other.png) 10px center no-repeat;
+    }
+
+    .nav-collapse .nav > li.header_link > a:hover,
+    .nav-collapse .nav > li.header_link > a:focus {
+        background: #ddd url(../img/common/ico_other.png) 10px center no-repeat;
+        color: #000;
+        border-bottom: #CCC solid 1px;
+    }
+    
+    .nav-collapse .nav > li.header_link.store a{
+    	background: rgb(198, 23, 30) url(../img/common/ico_reserve_w.png) 7px center no-repeat;
+    	background-size: 32px !important;
+    	color: #fff;
+    }
+    .nav-collapse .nav > li.header_link.store > a:hover,
+    .nav-collapse .nav > li.header_link.store > a:focus {
+        background: rgb(198, 23, 30) url(../img/common/ico_reserve_w.png) 7px center no-repeat;
+        background-size: 32px !important;
+        color: #fff;
+    }
+
+    .nav-collapse .nav > li.active > a,
+    .nav-collapse .nav > li.active > a:hover {
+        display: block;
+        position: relative;
+        padding: 15px 15px 15px 45px;
+        height: 15px;
+        margin: 0;
+        color: #fff;
+        letter-spacing: 0;
+        text-decoration: none;
+        text-align: left;
+        font-size: 0.9em;
+        line-height: 1;
+        border-bottom: #CCC solid 1px;
+        background: #665C4E;
+    }
+
+    .nav-collapse .nav > li.active > a:after {
+        position: absolute;
+        display: block;
+        left: 35px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        margin-top: -4px;
+        border-top: 4px solid transparent;
+        border-left: 6px solid #fff;
+        border-bottom: 4px solid transparent;
+        content: "";
+    }
+
+    .navbar-inverse .nav-collapse .nav > li > a,
+    .navbar-inverse .nav-collapse .dropdown-menu a {
+        color: #000;
+    }
+
+    .nav-collapse,
+    .nav-collapse.collapse {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .navbar .btn-navbar {
+        display: block;
+        position: absolute;
+        top: 11px;
+        right: 5%;
+    }
+
+}
+
+@media (max-width: 680px) {
+
+    .navbar .btn-navbar {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar .btn-navbar {
+        display: block;
+        position: absolute;
+        top: 6px;
+        right: 5%;
+    }
+
+}

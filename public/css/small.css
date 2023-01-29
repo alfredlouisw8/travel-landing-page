@@ -1,0 +1,849 @@
+/*--------------------------------------------------------------
+共通
+--------------------------------------------------------------*/
+
+body#spring,
+body#summer,
+body#autumn,
+body#winter {
+    background: none;
+}
+
+body p {}
+
+.wrapper_spwide {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+a.btn_detail {
+    width: 100%;
+}
+
+a.btn_detail_w,
+a.btn_detail_p,
+a.btn_detail_l {
+    box-sizing: border-box;
+    font-size: 0.8em;
+}
+
+.btn_detail_w {
+    background-position: 3% center;
+}
+
+a.btn_detail_w:hover {
+    background-position: 3% center;
+}
+
+.sp {
+    display: block;
+}
+
+.never {
+    display: block;
+}
+
+.sp_none {
+    display: none;
+}
+
+#ttl_mds h2 {
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+
+.detail_overview h2 .txt_ttl {
+    font-size: 1em;
+}
+
+.icon_cate {
+    float: right;
+    text-align: right;
+    width: 30%;
+}
+
+.icon_txt2 {
+    font-size: 14px;
+}
+
+.icon_txt_name {
+    font-size: 14px;
+}
+
+.area_sns_mds .area_name {
+    width: 96%;
+    float: none;
+    margin-left: 4%;
+}
+
+.old_name {
+    font-size: 10px;
+}
+
+.pickup_slick .pickup_event_tab {
+    display: none;
+}
+
+.pickup_slick .pickup_event_sp {
+    display: block;
+}
+
+.w100_sp {
+    width: 100% !important;
+}
+
+
+/*--------------------------------------------------------------
+大分類タイトル
+--------------------------------------------------------------*/
+
+#ttl_mds img.img_temple {
+    width: 28px;
+}
+
+#ttl_mds img.img_stay {
+    width: 28px;
+}
+
+#ttl_mds img.img_event {
+    width: 28px;
+}
+
+#ttl_mds img.img_gourmet {
+    width: 28px;
+}
+
+#ttl_mds img.img_tour {
+    width: 28px;
+}
+
+#ttl_mds img.img_course {
+    width: 28px;
+}
+
+#ttl_mds img.img_page {
+    width: 28px;
+}
+
+#ttl_mds .pc {
+    display: none;
+}
+
+#ttl_mds .sp {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+ナビゲーション
+--------------------------------------------------------------*/
+
+#globalnav ul.menunav,
+#globalnav ul.menunav_cal {
+    padding: 0;
+}
+
+#globalnav ul.menunav li,
+#globalnav ul.menunav_cal li {
+    width: 100%;
+    font-size: 1.2em;
+    display: block;
+    margin: 0 0 0.25em 0;
+}
+
+#globalnav ul.menunav li a span,
+#globalnav ul.menunav_cal li a span {
+    background: transparent url("../img/common/icon_osusume_arrow02.png") no-repeat 0 6px;
+    padding: 0 0 0 20px;
+    background-size: auto 40%;
+}
+
+.navbar .btn-navbar .txt {
+    font-size: 8px;
+}
+
+
+/*--------------------------------------------------------------
+見出し・リード
+--------------------------------------------------------------*/
+
+.mds_line {
+    padding: 0 0 0.25em 0.8em;
+}
+
+
+/*--------------------------------------------------------------
+メインイメージ
+--------------------------------------------------------------*/
+
+.free_img_area img {
+    width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+テーブル
+--------------------------------------------------------------*/
+
+.tbl_detail th {
+    width: 100%;
+    padding: 0.8em 0.8em 0 0.8em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    vertical-align: top;
+    border-top: 1px solid rgba(204, 204, 204, 1);
+    display: block;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.tbl_detail td {
+    padding: 0 0.8em 0.8em 0.8em;
+    border-top: none;
+    vertical-align: top;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.tbl_detail_full th {
+    width: 100%;
+    padding: 0.8em 0.8em 0 0.8em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    vertical-align: top;
+    border-top: 1px solid rgba(204, 204, 204, 1);
+    display: block;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.tbl_detail_full td {
+    padding: 0 0.8em 0.8em 0.8em;
+    border-top: none;
+    vertical-align: top;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.list_cont .text dt {
+    width: 30%;
+    padding: 0 2% 5px 0;
+    margin: 0;
+    float: left;
+}
+
+.list_cont .text dd {
+    width: 68%;
+    padding: 0 0 5px 0;
+    margin: 0;
+    float: left;
+}
+
+.tbl_detail table {
+    display: block;
+    width: auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.tbl_detail table th {
+    width: auto;
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tbl_detail table td {
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/*------------------------------------------------------------------------
+情報
+------------------------------------------------------------------------*/
+
+.img_map {
+    width: 100%;
+    float: left;
+}
+
+.info_gmap {
+    width: 100%;
+    float: left;
+}
+
+
+/*------------------------------------------------------------------------
+絞り込み
+------------------------------------------------------------------------*/
+
+body#spring #genrenav ul.menunav li,
+body#summer #genrenav ul.menunav li,
+body#autumn #genrenav ul.menunav li,
+body#winter #genrenav ul.menunav li {
+    width: 100%;
+}
+
+body#spring #genrenav ul.menunav_cal li,
+body#summer #genrenav ul.menunav_cal li,
+body#autumn #genrenav ul.menunav_cal li,
+body#winter #genrenav ul.menunav_cal li {
+    width: 49.6%;
+    float: left;
+}
+
+#genrenav.stay ul.menunav li {
+    width: 100%;
+}
+
+#genrenav.stay ul.menunav_cal li {
+    width: 49.6%;
+    float: left;
+}
+
+.osusume_photo {
+    display: none;
+    /*	width: 15%;*/
+}
+
+ul.osusume_search {
+    width: 100%;
+}
+
+ul.osusume_search li a {
+    width: 100%;
+}
+
+ul.osusume_search li:nth-child(2) a {
+    border-top: 0;
+}
+
+ul.osusume_search li:nth-child(2) a.top {
+    border-top: 0;
+}
+
+#month_area {
+    width: 92%;
+    margin: 0 auto 30px;
+}
+
+.tab_month div a {
+    font-size: 18px;
+}
+
+.tab_month div a span {
+    font-size: 12px;
+}
+
+.show .col4,
+.slides .col4 {
+    width: 100%;
+}
+
+.show .list_cont_sp .photo {
+    width: 28%;
+}
+
+.show .list_cont_sp .text {
+    width: 69%;
+}
+
+
+/*--------------------------------------------------------------
+ジャンルで絞り込む　新レイアウト
+--------------------------------------------------------------*/
+
+.genre_layout .col2 {
+    width: 100%;
+}
+
+.genre_layout .item img {
+    width: 20%;
+    padding: 0;
+}
+
+.genre_layout .item .keywordcol {
+    width: 80%;
+    padding: 0 1em 0;
+}
+
+
+/*--------------------------------------------------------------
+概要
+--------------------------------------------------------------*/
+
+.half_l .area_links {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.half_s p {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.half_s .search_box {
+    width: 94%;
+    margin: 0 auto 30px;
+}
+
+.search_bnr a {
+    width: 86%;
+    margin: 0 0 1em 0;
+}
+
+
+/*--------------------------------------------------------------
+エリアで絞り込む
+--------------------------------------------------------------*/
+
+.half_l .area_links {
+    background: none;
+}
+
+.half_l .area_links .btn_red,
+.half_l .area_links .btn_green,
+.half_l .area_links .btn_blue,
+.half_l .area_links .btn_yellow {
+    width: 100%;
+    text-align: left;
+    position: static;
+}
+
+.half_l .area_links .btn_red a,
+.half_l .area_links .btn_green a,
+.half_l .area_links .btn_blue a,
+.half_l .area_links .btn_yellow a {
+    width: 100%;
+    font-size: 1em;
+}
+
+.half_l .area_links .btn_red span {
+    text-align: right;
+}
+
+.research_layout .area_links .btn_red span {
+    text-align: left;
+}
+
+#search_list #area_green .wrapper,
+#search_list #area_red .wrapper,
+#search_list #area_blue .wrapper,
+#search_list #area_yellow .wrapper {
+    width: 76%;
+}
+
+#search_list #area_genre .box_area {
+    width: 88%;
+    margin: 0 auto 60px;
+}
+
+#area_green .area_icon {
+    padding: 2.5em 0 0 0;
+    background: url(../img/common/icon_green.png) center top no-repeat;
+    font-size: 1.1em;
+    background-size: 36px auto;
+}
+
+#area_yellow .area_icon {
+    padding: 2.5em 0 0 0;
+    background: url(../img/common/icon_yellow.png) center top no-repeat;
+    font-size: 1.1em;
+    background-size: 36px auto;
+}
+
+#area_red .area_icon {
+    padding: 2.5em 0 0 0;
+    background: url(../img/common/icon_red.png) center top no-repeat;
+    font-size: 1.1em;
+    background-size: 36px auto;
+}
+
+#area_blue .area_icon {
+    padding: 2.5em 0 0 0;
+    background: url(../img/common/icon_blue.png) center top no-repeat;
+    font-size: 1.1em;
+    background-size: 36px auto;
+}
+
+p.ssearch_p .sright {
+    width: 100%;
+}
+
+.iconlist {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.iconlist .list_cont_sp {
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+.date_box {
+    width: 94%;
+    margin: 0 auto;
+    float: none;
+}
+
+.month_box {
+    width: 94%;
+    margin: 0 auto;
+    float: none;
+}
+
+a.col_spot {
+    width: 50%;
+}
+
+#maincontainer li.item img {
+    max-height: 320px;
+}
+
+.wrapper_spwide .restxt_box {
+    width: 94%;
+    margin: 0 auto;
+    float: none;
+}
+
+
+/*------------------------------------------------------------------------
+集合
+------------------------------------------------------------------------*/
+
+.left_cont {
+    padding: 0 0 30px 0;
+    width: 100%;
+    float: left;
+}
+
+.right_cont {
+    padding: 0 0 30px 0;
+    width: 100%;
+    float: right;
+    text-align: left;
+}
+
+.border_cont {
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+temple 詳細
+--------------------------------------------------------------*/
+
+.txt_attribute {
+    text-align: left;
+}
+
+
+/*------------------------------------------------------------------------
+バナー
+------------------------------------------------------------------------*/
+
+#maincontainer a.bnr_bg {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    width: 80%;
+    padding: 0 0 0 0;
+    margin: 0 auto 15px;
+    text-align: left;
+}
+
+#maincontainer a.bnr {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 37.5%;
+    padding: 0 0 0 0;
+    margin: 0 1.8% 0;
+    float: none;
+}
+
+
+/*--------------------------------------------------------------
+ストックフォト
+--------------------------------------------------------------*/
+
+#gradbody .cont_grad .leadtxt {
+    font-size: 1em;
+}
+
+.img_stockphoto {
+    display: none;
+}
+
+img.grad_main {
+    display: none;
+}
+
+.cart_area {
+    width: 92%;
+    padding: 4%;
+}
+
+a.btn_cart,
+.cart_in a.btn_cart,
+a.btn_delete {
+    padding: 0.75em 2em 0.75em 3em;
+    display: block;
+    font-size: 1.2em;
+    position: static;
+    margin: 0.75em 0 0;
+}
+
+.btn_cart_color1,
+.btn_cart_color2 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#gradbody .cont_grad dd ul li {
+    padding: 1.5em 0 0 1em;
+}
+
+.cart_area #cartbody .list_cont .photo {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+}
+
+.cart_area #cartbody .list_cont .text {
+    width: 100%;
+}
+
+.cart_area #cartbody .tbl_detail th,
+.stockphoto_area .tbl_detail th {
+    border-top: none;
+    border-bottom: none;
+}
+
+.tbl_form th {
+    width: 100%;
+    border-bottom: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.tbl_form td {
+    padding: 0.5em 1em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*--------------------------------------------------------------
+ログイン
+--------------------------------------------------------------*/
+
+.wrapper_smart #loginbox .btnlogin a {
+    width: 100%
+}
+
+
+/*--------------------------------------------------------------
+2カラムシャドーボックス
+--------------------------------------------------------------*/
+
+.num_mds .num_txt {
+    margin: 0 0.5em 0 0;
+}
+
+
+/*--------------------------------------------------------------
+縁をむすぶ
+--------------------------------------------------------------*/
+
+.enishi_area_cont .left_cont {
+    width: 100%;
+    float: none;
+    margin: 0 0 1em;
+}
+
+.enishi_area_cont .left_cont img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.enishi_area_cont .right_cont {
+    width: 100%;
+}
+
+#season_spring .mds_middle:before {
+    left: -2em;
+    width: 1em;
+}
+
+#season_spring .mds_middle:after {
+    right: -2em;
+    width: 1em;
+}
+
+#season_summer .mds_middle:before {
+    left: -2em;
+    width: 1em;
+}
+
+#season_summer .mds_middle:after {
+    right: -2em;
+    width: 1em;
+}
+
+#season_autumn .mds_middle:before {
+    left: -2em;
+    width: 1em;
+}
+
+#season_autumn .mds_middle:after {
+    right: -2em;
+    width: 1em;
+}
+
+#season_winter .mds_middle:before {
+    left: -2em;
+    width: 1em;
+}
+
+#season_winter .mds_middle:after {
+    right: -2em;
+    width: 1em;
+}
+
+.one_area ol li {
+    width: 100%;
+    padding: 0 0 1em 3em;
+    position: relative;
+    float: none;
+}
+
+
+/*--------------------------------------------------------------
+ようこそ奈良へ
+--------------------------------------------------------------*/
+
+#welcome_layout .col4 {
+    width: 100%;
+}
+
+.bgmain_welcome {
+    display: none;
+}
+
+
+/*--------------------------------------------------------------
+開花カレンダー
+--------------------------------------------------------------*/
+
+#flower_calendar {
+    width: 74%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 13%
+}
+
+#flower_calendar table {
+    width: 8.3%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-spacing: 1px;
+    table-layout: fixed;
+    background: #fff;
+    float: left;
+}
+
+#flower_calendar table th {
+    width: 8%;
+    padding: 7px 0;
+    margin: 0 0 15px;
+    color: #A8A8A8;
+    border: 1px solid #DDD;
+    background: #EFEFEF;
+    box-sizing: border-box;
+}
+
+#flower_calendar table td {
+    min-width: 5%;
+    height: 80px;
+    padding: 8px 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+/*--------------------------------------------------------------
+サイトマップ
+--------------------------------------------------------------*/
+
+#sitemap dl.sitelist {
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    list-style: none;
+    display: block;
+    line-height: 1.5;
+    text-align: left;
+    float: left;
+}
+
+
+/*--------------------------------------------------------------
+アプリのご案内
+--------------------------------------------------------------*/
+
+.app_ttlimg {
+    width: 94%;
+    margin: 0 0 8px 0;
+}
+
+#app .app_lead {
+    color: #8B2360;
+    margin: 25px 0 40px;
+    line-height: 1.4;
+    font-size: 1.2em;
+}
+
+#app .app_lead br {
+    display: none;
+}
+
+#app .app_box {
+    width: 100%;
+    float: left;
+    margin: 0 0 0 0;
+    font-size: 1.1em;
+}
+
+#app .img_capture {
+    width: 90%;
+    margin: 0px auto 40px;
+    border: 1px solid #ddd;
+    text-align: center;
+    display: block;
+}
+
+#app .btn_dl {
+    width: 42%;
+}
+
+
+/*--------------------------------------------------------------
+人気のキーワード
+--------------------------------------------------------------*/
+
+p.keyword_top span {
+    white-space: nowrap;
+}

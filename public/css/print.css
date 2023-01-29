@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------
+プリント
+------------------------------------------------------------------------*/
+
+
+
+/*共通-------------------------*/
+
+@media print {
+body {
+margin:0 auto;
+padding:0;
+width:100%;
+zoom: 100%;
+}
+
+header {
+position:relative;
+background-color:inherit;
+-webkit-box-shadow:none;
+box-shadow:none;
+padding-bottom:0.5em;
+border-bottom:rgba(204,204,204,1) solid 1px;
+margin-bottom:0.5em;
+}
+header .tel {
+	text-align:right;
+}
+
+.wrapper,
+.wrapper_s {
+	width:100%;
+}
+
+
+#hlink_contact ul.hlink,
+.navbar,
+#contmenu,
+#recomm,
+#breadcrumb,
+#bnr,
+#iconbnr,
+footer,
+#btn_print,
+#hlink_contact,
+.wrapper_banner {
+	display:none;
+}
+
+#maincontainer {
+	margin: 0 0 0 0;
+	padding: 0px;
+}
+#header_img_noimg {
+	display: block;
+	position:absolute;
+	top:-1000px;
+	margin: 0;
+	width: 100%;
+	height: 0px!important;
+	padding: 0 0 0 0;
+	margin-bottom: 0px;
+	text-align: center;
+	background-color:rgba(204,204,204,0.4);
+}
+
+
+#plandetail {
+	display:block;
+	width:100% !important;
+	float:none;
+	margin:0;
+}
+
+#reserve_cont {
+	display:none !important;
+}
+
+#planlist {
+	display:none !important;
+}
+
+#access img {
+	max-width:none !important;
+}
+
+
+
+/* box-shadow none */
+
+#gradbody,
+#maincontainer li.item img,
+#detailbody,
+.content .show,
+.wrapper_spwide .half_body,
+#whitebody,
+#bgttl {
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	border:rgba(204,204,204,1) solid 1px;
+}
+
+
+
+
+@media print and (-ms-high-contrast:none){
+  *::-ms-backdrop, body { zoom: 100%; } /* IE11 */
+}
+
+@media print and (-ms-high-contrast:none){
+  body { zoom: 100%; } /* IE10 */
+}
+

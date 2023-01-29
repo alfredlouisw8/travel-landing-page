@@ -1,0 +1,324 @@
+/*------------------------------------------------------------------------
+1280px ～
+------------------------------------------------------------------------*/
+
+footer {
+    margin: 30px 0 0 0;
+    padding: 50px 0 0;
+    background:#000000; 
+    overflow: hidden;
+}
+
+body#winter footer {
+    margin: 30px 0 0 0;
+    padding: 50px 0 0;
+    background:#43234B url(../img/winter/footer_winter.png) no-repeat center bottom; 
+    overflow: hidden;
+}
+
+.menulist {
+    box-sizing: border-box;
+    padding: 0 2% 0 1%;
+    margin: 0;
+    text-align: left;
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.menulist .mds_link a {
+    color: #EFD7AB;
+    text-decoration: none;
+}
+
+.menulist ul.direct_link {
+    padding: 0;
+    margin: 0 0 2em 0;
+    list-style: none;
+    text-align: left;
+    font-size: 1em;
+}
+
+.menulist ul.direct_link li {
+    display: block;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+}
+
+.menulist ul.direct_link li > a {
+    padding: 0 0 0 10px;
+    margin: 0;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+
+.menulist ul.direct_link li > a:hover {
+    color: #ccc;
+}
+
+.menulist ul.direct_link li > a:before {
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    border-top: 3px solid transparent;
+    border-left: 4px solid #fff;
+    border-bottom: 3px solid transparent;
+    content: "";
+}
+
+/*------------------------------------------------------------------------
+バナー
+------------------------------------------------------------------------*/
+
+#bnr {
+    max-width: 960px;
+    display: block;
+    padding: 30px 0 20px 0;
+    margin: 0 auto;
+    list-style: none;
+    clear: both;
+}
+
+#bnr ul {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 auto 10px;
+    list-style: none;
+    clear: both;
+    text-align: center;
+    font-size: 0;
+}
+
+#bnr ul li {
+    display: inline-block;
+    width: 23.5%;
+    padding: 0 0 0 0;
+    margin: 2% 2% 0 0;
+    text-align: center;
+}
+
+#bnr ul li:last-child {
+    margin: 0;
+    padding: 0;
+}
+
+#bnr ul li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*------------------------------------------------------------------------
+サイトマップ等リンク
+------------------------------------------------------------------------*/
+
+ul.linklist {
+    width: 100%;
+    clear: both;
+    margin: 0 auto 50px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul.linklist li {
+    display: inline-block;
+    margin: 0 1em;
+    padding: 0;
+}
+
+ul.linklist li > a {
+    padding: 0 0 0 10px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-size: 0.85em;
+}
+
+ul.linklist li > a:hover {
+    color: #ccc;
+}
+
+ul.linklist li > a:before {
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    border-top: 3px solid transparent;
+    border-left: 4px solid #fff;
+    border-bottom: 3px solid transparent;
+    content: "";
+}
+
+/*------------------------------------------------------------------------
+ロゴ＆コピーライト
+------------------------------------------------------------------------*/
+
+#sitelogo_footer {
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+#sitelogo_footer a {
+    color: #fff;
+    display: inline-block;
+    margin: 0 0 15px;
+}
+
+#sitelogo_footer p {
+    color: #fff;
+    font-size: 0.8em;
+    font-family: Times New Roman;
+}
+
+#sitelogo_footer p a.link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+}
+
+/*------------------------------------------------------------------------
+1000～1140px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1140px) {
+    footer {
+        margin: 30px 0 0 0;
+    }
+
+    .menulist {
+
+    }
+
+}
+
+/*------------------------------------------------------------------------
+480～1000px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+    footer {
+        margin: 0 0 0 0;
+    }
+
+    .menulist ul.direct_link li > a {
+        font-size: 1.1em;
+    }
+
+    footer ul.linklist li {
+        font-size: 1.1em;
+    }
+
+    #sitelogo_footer p.address {
+        font-size: 1.1em;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～680px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 680px) {
+    footer {
+        margin: 0 0 0 0;
+    }
+
+    #bnr ul li {
+        display: inline-block;
+        width: 48%;
+        padding: 0 0 0 0;
+        margin: 0 4% 4% 0;
+        text-align: center;
+    }
+
+    #bnr ul li:nth-child(even) {
+        margin: 0 0 4% 0;
+        padding: 0;
+    }
+
+    .menulist {
+        box-sizing: border-box;
+        padding: 0 4% 0 0;
+        float: left;
+        width: 50%;
+        min-height: 295px;
+    }
+
+    .menulist:nth-child(3) {
+        min-height: 205px;
+    }
+
+    .menulist:nth-child(4) {
+        min-height: 205px;
+    }
+
+    .menulist:nth-child(5) {
+        min-height: 205px;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+～480px
+------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+    footer {
+        margin: 0 0 0 0;
+    }
+
+    #bnr ul li {
+        display: inline-block;
+        width: 80%;
+        padding: 0 0 0 0;
+        margin: 0 0 4% 0;
+        text-align: center;
+    }
+
+    ul.linklist {
+        width: 90%;
+        clear: both;
+        margin: 0 auto 50px;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    ul.linklist li {
+        display: inline-block;
+        margin: 0 1em;
+        padding: 0;
+    }
+
+    ul.linklist li > a {
+        padding: 0 0 0 10px;
+        margin: 0;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        font-size: 0.75em;
+    }
+
+    .menulist ul.direct_link li > a {
+        font-size: 1em;
+    }
+
+    footer ul.linklist li {
+        font-size: 1em;
+    }
+
+    #sitelogo_footer p.address {
+        font-size: 1em;
+    }
+
+}
