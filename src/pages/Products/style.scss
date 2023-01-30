@@ -2,7 +2,6 @@
 
 .products {
 	position: relative;
-	margin-top: -3.5rem;
 
 	.reset {
 		text-decoration: underline;
@@ -41,8 +40,6 @@
 	}
 
 	> .container {
-		margin-top: -7rem;
-
 		@include breakpoint(untilTablet) {
 			margin-top: 1rem;
 		}
@@ -50,7 +47,6 @@
 
 	.productsWrapper,
 	.skeletonWrapper {
-		width: 90%;
 		margin: auto;
 
 		@include breakpoint(untilTablet) {
@@ -67,7 +63,7 @@
 		color: white;
 		font-weight: bold;
 		margin-bottom: 2rem;
-		border-radius: 1.25rem 1.25rem 0 0;
+		border-radius: 0;
 
 		@include breakpoint(untilTablet) {
 			font-size: 1.25rem;
@@ -90,9 +86,7 @@
 	.productItems {
 		.item {
 			margin-bottom: 2rem;
-			border: 1px solid #f1efef;
 			padding: 1rem;
-			border-radius: 1.25rem;
 
 			.image {
 				margin: -1rem;
@@ -103,7 +97,6 @@
 					width: 100%;
 					height: 180px;
 					object-fit: cover;
-					border-top-left-radius: 1.25rem;
 				}
 			}
 
@@ -151,10 +144,6 @@
 				margin: -1rem;
 				margin-top: 0;
 				padding-top: 0.5rem;
-
-				.btn {
-					border-radius: 0 0 1.25rem 0;
-				}
 			}
 
 			.title {

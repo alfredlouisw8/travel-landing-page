@@ -12,23 +12,23 @@ import RequestBook from "./pages/RequestBook";
 import Invoice from "./pages/Invoice";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CartProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route path="/" element={<Products />} />
-            <Route exact path="product" element={<ProductDetail />} />
-            <Route path="request-book" element={<RequestBook />} />
-            <Route path="success" element={<Invoice />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      ,
-    </CartProvider>
-    ,
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<CartProvider>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
+				<Routes>
+					<Route path="/" element={<App />}>
+						<Route path="/" element={<Products />} />
+						<Route exact path="product" element={<ProductDetail />} />
+						<Route path="request-book" element={<RequestBook />} />
+						<Route path="success" element={<Invoice />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+			,
+		</CartProvider>
+		,
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

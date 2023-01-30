@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 import {
-	useNavigate,
+	//useNavigate,
 	useOutletContext,
 	useSearchParams,
 } from "react-router-dom";
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { isEmpty } from "lodash";
 import { produce } from "immer";
 
@@ -47,7 +47,7 @@ const ProductDetail = () => {
 	const id = searchParams.get("id");
 	const [language] = useOutletContext();
 	const { t } = useTranslation();
-	const navigate = useNavigate();
+	//const navigate = useNavigate();
 
 	const today = new Date();
 	const date = new Date(today);
@@ -277,7 +277,7 @@ const ProductDetail = () => {
 	return (
 		<>
 			<div className="container">
-				<a
+				{/* <a
 					href="#"
 					onClick={(e) => {
 						e.preventDefault();
@@ -287,7 +287,7 @@ const ProductDetail = () => {
 				>
 					<FontAwesomeIcon icon={faArrowLeft} className="me-2" />
 					{t("go_back")}
-				</a>
+				</a> */}
 				<Row className="product">
 					<div
 						className="skeletonWrapper"
@@ -301,8 +301,8 @@ const ProductDetail = () => {
 							className="productWrapper"
 							style={{ display: detailShow ? "block" : "none" }}
 						>
-							<div className="serviceType">{getServiceType()}</div>
-							<h2 className="title mb-5 text-black">{service.Name}</h2>
+							<div className="serviceType w-100">{getServiceType()}</div>
+							<h2 className="title mb-5 font nara-season">{service.Name}</h2>
 							<div className="carousel">
 								{service.Images !== null ? (
 									<Slider {...settings}>

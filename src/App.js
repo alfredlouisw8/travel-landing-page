@@ -11,11 +11,15 @@ import Cart from "./components/Cart";
 
 import "./App.scss";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "./pages/Products/components/LanguageSelector";
 
 function App() {
 	const [language, setLanguage] = useState("jp");
 	const [searchParams, setSearchParams] = useSearchParams();
 	const langParams = searchParams.get("lang");
+	const idParams = searchParams.get("id");
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		i18n.changeLanguage("jp");
@@ -29,7 +33,7 @@ function App() {
 		moment.locale(langLocale);
 	}, [langParams]);
 
-	const handleOnclick = (e) => {
+	const handleOnchange = (e) => {
 		e.preventDefault();
 		setLanguage(e.target.value);
 		i18n.changeLanguage(e.target.value);
@@ -38,9 +42,9 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<div className="translate container">
-				<div className="content">
+		<div className="App my-4">
+			<div className="container">
+				{/* <div className="content">
 					<button
 						className={`btn ${language === "en" ? "active" : ""}`}
 						value="en"
@@ -55,6 +59,22 @@ function App() {
 					>
 						日本語
 					</button>
+				</div> */}
+				<div className="breadcrumb w-100">
+					<div>
+						<a href="https://yamatoji.nara-kankou.or.jp/">{t("home")}</a>
+						<span className="separator">|</span>
+						<span>{t("list")}</span>
+						{idParams && (
+							<>
+								<span className="separator">|</span>
+								<span>{t("details")}</span>
+							</>
+						)}
+					</div>
+					<div>
+						<LanguageSelector handleOnchange={handleOnchange} />
+					</div>
 				</div>
 			</div>
 			<Outlet context={[language]} />

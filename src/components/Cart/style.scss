@@ -65,7 +65,7 @@
 	}
 
 	.cartButton {
-		background: var(--primary);
+		background: $secondary;
 		display: inline-block;
 		position: relative;
 		padding: 0.5rem;
@@ -92,7 +92,7 @@
 			justify-content: center;
 			font-weight: bold;
 			border-radius: 50%;
-			background-color: $secondary;
+			background-color: red;
 		}
 	}
 }

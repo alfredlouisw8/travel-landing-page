@@ -93,7 +93,7 @@ const Items = ({
 								</div>
 								<div className="buttonWrapper">
 									<Button
-										className="w-100 bg nara-season bordered"
+										className="w-100 nara-season bordered bg-transparent font"
 										variant="primary"
 										onClick={() =>
 											goToDetail(service.Id, service.OnRequestOnly)

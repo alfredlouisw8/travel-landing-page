@@ -390,7 +390,8 @@ const Products = () => {
 		<div className="products">
 			<div className="container">
 				<div className="productsWrapper" style={{ display: productsShow }}>
-					<div className="titlePage">{t("search")}</div>
+					<h1 className="text-center">{t("search")}</h1>
+					<div className="titlePage text-start">{t("subtitle")}</div>
 					<div className="reset" onClick={() => resetFilter()}>
 						{t("reset_filter")}
 					</div>
@@ -411,10 +412,12 @@ const Products = () => {
 					<div className="d-flex flex-wrap justify-content-between productsOption mb-4">
 						<div className="mb-3 mb-lg-0">
 							<Button
-								variant={stateButton === "quick" ? "primary" : "secondary"}
+								variant="primary"
 								onClick={() => changeToQuick()}
 								className={`me-2 me-lg-3 fw-bold ${
-									stateButton === "quick" ? "bg nara-season bordered" : ""
+									stateButton === "quick"
+										? "bg nara-season bordered"
+										: "text-dark transparent-bg border-0"
 								}`}
 							>
 								{t("quick_booking")}
@@ -427,9 +430,13 @@ const Products = () => {
                 {t("request_book")}
               </Button> */}
 							<Button
-								variant={stateButton === "map" ? "primary" : "secondary"}
+								variant="primary"
 								onClick={() => changeToMap()}
-								className="fw-bold"
+								className={`fw-bold ${
+									stateButton === "map"
+										? "bg nara-season bordered"
+										: "text-dark bg-transparent border-0"
+								}`}
 							>
 								{t("map")}
 							</Button>
@@ -448,6 +455,10 @@ const Products = () => {
 							</Form.Select>
 						</div>
 					</div>
+					<div
+						className="bg nara-season w-100 mb-3"
+						style={{ height: "3px" }}
+					></div>
 					<div
 						className="productItems"
 						style={{ display: stateButton !== "map" ? "block" : "none" }}

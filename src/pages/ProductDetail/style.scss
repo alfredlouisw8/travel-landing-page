@@ -1,8 +1,6 @@
 @import "../../assets/styles/variables";
 
 .container {
-	padding: 5vh 1rem;
-
 	.slick-slide img {
 		margin: auto;
 	}
@@ -31,13 +29,10 @@
 			padding-top: 0;
 
 			.serviceType {
-				margin-left: -2.25rem;
-				margin-top: -0.25rem;
 				padding: 0.5rem 2rem;
 				padding-bottom: 0.75rem;
 				font-size: 1.25rem;
 				margin-bottom: 1.5rem;
-				border-bottom-right-radius: 1.25rem;
 				background: var(--primary);
 				color: #fff;
 				font-weight: bold;
@@ -188,7 +183,7 @@
 					padding-left: 1rem;
 					display: inline-block;
 					font-weight: bold;
-					border-top-right-radius: 1.25rem;
+					width: 100%;
 					font-size: 1.25rem;
 				}
 			}
