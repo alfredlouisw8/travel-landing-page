@@ -1,158 +1,157 @@
 @import "../../../../assets/styles/variables";
 
 .availableProducts {
-  .items {
-    .productItem {
-      margin-bottom: 2rem;
+	.items {
+		.productItem {
+			margin-bottom: 2rem;
 
-      .info {
-        padding-left: 1rem;
-        border-left: 6px solid $secondary;
+			.info {
+				padding-left: 1rem;
+				border-left: 6px solid var(--primary);
 
-        .qty {
-          align-items: center;
-          margin-bottom: 0.5rem;
+				.qty {
+					align-items: center;
+					margin-bottom: 0.5rem;
 
-          .form-label {
-            margin-bottom: 0;
-          }
+					.form-label {
+						margin-bottom: 0;
+					}
 
-          input {
-            height: 30px;
-            width: 60px;
-          }
+					input {
+						height: 30px;
+						width: 60px;
+					}
 
-          select {
-            height: 45px;
-            width: fit-content;
-          }
-        }
+					select {
+						height: 45px;
+						width: fit-content;
+					}
+				}
 
-        .timeSelect {
-          height: auto !important;
-          padding-right: 32px;
-          margin-left: .5rem;
-        }
+				.timeSelect {
+					height: auto !important;
+					padding-right: 32px;
+					margin-left: 0.5rem;
+				}
 
+				.name,
+				.price {
+					font-weight: bold;
+					font-size: 1.25rem;
+					margin-bottom: 0.5rem;
+				}
 
-        .name,
-        .price {
-          font-weight: bold;
-          font-size: 1.25rem;
-          margin-bottom: 0.5rem;
-        }
+				.extras {
+					.form-check-input:checked {
+						background-color: rgb(57, 57, 192);
+						border-color: rgb(57, 57, 192);
+					}
 
-        .extras {
-          .form-check-input:checked {
-            background-color: rgb(57, 57, 192);
-            border-color: rgb(57, 57, 192);
-          }
+					.form-check-input:focus {
+						border-color: rgb(57, 57, 192);
+						outline: 0;
+						box-shadow: 0 0 0 0.25rem rgb(57 57 192 / 25%);
+					}
+				}
 
-          .form-check-input:focus {
-            border-color: rgb(57, 57, 192);
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgb(57 57 192 / 25%);
-          }
-        }
+				.image {
+					margin-bottom: 0.5rem;
+				}
 
-        .image {
-          margin-bottom: 0.5rem;
-        }
+				.desc {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 3;
+					-webkit-box-orient: vertical;
 
-        .desc {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
+					&.active {
+						display: block;
+					}
+				}
+			}
 
-          &.active {
-            display: block;
-          }
-        }
-      }
+			.seeMore {
+				text-decoration: underline;
+			}
 
-      .seeMore {
-        text-decoration: underline;
-      }
+			.action {
+				display: flex;
+				justify-content: flex-end;
 
-      .action {
-        display: flex;
-        justify-content: flex-end;
-
-        .btn {
-          font-weight: bold;
-          padding: 0.75rem 1.5rem;
-          white-space: nowrap;
-        }
-      }
-    }
-  }
+				.btn {
+					font-weight: bold;
+					padding: 0.75rem 1.5rem;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
 }
 
 .imageSliders {
+	.modal-content {
+		background-color: transparent;
+		border: none;
 
-  .modal-content {
-    background-color: transparent;
-    border: none;
+		.btn-close {
+			background: transparent
+				url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+				center/1em auto no-repeat;
+			opacity: 1;
+		}
 
-    .btn-close {
-      background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
-      opacity: 1;
-    }
+		.modal-header {
+			color: white;
+		}
 
-    .modal-header {
-      color: white;
-    }
+		.modal-body {
+			.image {
+				height: 75vh;
+				object-fit: contain;
+				margin: auto;
+				width: 99%;
+			}
+		}
 
-    .modal-body {
+		.slick-dots li.slick-active button:before {
+			color: white;
+			opacity: 1;
+		}
 
-      .image {
-        height: 75vh;
-        object-fit: contain;
-        margin: auto;
-        width: 99%;
-      }
-    }
-
-    .slick-dots li.slick-active button:before {
-      color: white;
-      opacity: 1;
-    }
-
-    .slick-dots li button:before {
-      color: white;
-      opacity: .5;
-    }
-  }
+		.slick-dots li button:before {
+			color: white;
+			opacity: 0.5;
+		}
+	}
 }
 
 .mainImage {
-  position: relative;
+	position: relative;
 
-  .zoomIn {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    font-size: 24px;
-    height: 100%;
-    background-color: rgba($color: black, $alpha: 0.15);
-    transition: all .2s;
+	.zoomIn {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 200px;
+		font-size: 24px;
+		height: 100%;
+		background-color: rgba($color: black, $alpha: 0.15);
+		transition: all 0.2s;
 
-    &:hover {
-      background-color: rgba($color: black, $alpha: 0.3);
-      font-size: 28px;
-    }
+		&:hover {
+			background-color: rgba($color: black, $alpha: 0.3);
+			font-size: 28px;
+		}
 
-    svg {
-      path {
-        fill: white;
-      }
-    }
-  }
+		svg {
+			path {
+				fill: white;
+			}
+		}
+	}
 }

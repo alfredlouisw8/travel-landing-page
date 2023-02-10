@@ -1,8 +1,10 @@
 export const TRANSLATIONS_JP = {
 	search: "探す",
+	search_title: "横浜の宿泊・体験プラン予約",
 	booking: "予約",
 	not_found: "現在商品を登録中です。またのご利用をお待ちしております。 😉",
-	subtitle: "奈良周辺のすべてを探す",
+	subtitle:
+		"横浜の宿泊・体験プラン予約 横浜市内のホテルや体験プランを「日程」「価格帯」「キーワード」で検索して、その場でオンライン予約することができます。宿泊予約サイトや遊び体験予約サイトに掲載されていないプランもここで見つかるかも知れません！",
 	all_categories: "すべてのカテゴリ",
 	accommodation: "宿泊施設",
 	activity: "アクティビティ",
@@ -12,8 +14,9 @@ export const TRANSLATIONS_JP = {
 	view_details: "詳細を見る",
 	basic_info: "基本情報",
 	map: "地図",
-	home: "ホーム",
-	list: "リスト",
+	home: "横浜観光TOP",
+	hotel: "横浜のホテル一覧",
+	list: "横浜の宿泊・体験プラン予約",
 	details: "詳細",
 	name: "名前",
 	address: "住所",

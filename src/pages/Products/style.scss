@@ -2,7 +2,6 @@
 
 .products {
 	position: relative;
-
 	.reset {
 		text-decoration: underline;
 		cursor: pointer;
@@ -56,13 +55,8 @@
 	}
 
 	.titlePage {
-		text-align: center;
-		padding: 0.5rem 1rem;
-		background: var(--primary);
-		font-size: 1.5rem;
-		color: white;
-		font-weight: bold;
-		margin-bottom: 2rem;
+		text-align: left;
+		margin-top: 2rem;
 		border-radius: 0;
 
 		@include breakpoint(untilTablet) {
@@ -155,5 +149,30 @@
 				font-weight: bold;
 			}
 		}
+	}
+}
+
+.hottopics {
+	background-color: #d7ebf8;
+}
+
+.htMainImg {
+	max-width: 470px;
+	width: 100%;
+}
+
+.htBox.area4 {
+	background: none;
+
+	&:before {
+		display: none;
+	}
+}
+
+.htBtn a {
+	background: $secondary;
+	&:hover {
+		background: none !important;
+		background-color: var(--primary) !important;
 	}
 }

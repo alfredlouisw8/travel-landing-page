@@ -85,11 +85,14 @@ const headers = {
 	"Content-Type": "application/json",
 };
 
+const isMobile = window.innerHeight < 768;
+
 export {
 	bodyRequest,
 	headers,
 	quoteRequest,
 	disablePastDate,
 	distributorQuick,
+	isMobile,
 	distributorRequest,
 };

@@ -22,6 +22,7 @@ import Items from "./components/Items";
 
 import "./style.scss";
 import "react-loading-skeleton/dist/skeleton.css";
+import Ads from "./components/Ads";
 
 const Products = () => {
 	const [language] = useOutletContext();
@@ -389,103 +390,110 @@ const Products = () => {
 	return (
 		<div className="products">
 			<div className="container">
-				<div className="productsWrapper" style={{ display: productsShow }}>
-					<h1 className="text-center">{t("search")}</h1>
-					<div className="titlePage text-start">{t("subtitle")}</div>
-					<div className="reset" onClick={() => resetFilter()}>
-						{t("reset_filter")}
-					</div>
-					<Filter
-						language={language}
-						filter={filterData}
-						date={date}
-						category={category}
-						priceRange={priceRange}
-						keyword={keyword}
-						typeShop={typeShop}
-						setDate={setDate}
-						setCategory={setCategory}
-						setPriceRange={setPriceRange}
-						setTypeShop={setTypeShop}
-						setKeyword={setKeyword}
-					/>
-					<div className="d-flex flex-wrap justify-content-between productsOption mb-4">
-						<div className="mb-3 mb-lg-0">
-							<Button
-								variant="primary"
-								onClick={() => changeToQuick()}
-								className={`me-2 me-lg-3 fw-bold ${
-									stateButton === "quick"
-										? "bg nara-season bordered"
-										: "text-dark transparent-bg border-0"
-								}`}
-							>
-								{t("quick_booking")}
-							</Button>
-							{/* <Button
+				<div className="row">
+					<div className="product-container col-md-9 col-12">
+						<div className="productsWrapper" style={{ display: productsShow }}>
+							<h4 className="text-center">{t("search_title")}</h4>
+							<div className="titlePage text-start">{t("subtitle")}</div>
+							<div className="reset" onClick={() => resetFilter()}>
+								{t("reset_filter")}
+							</div>
+							<Filter
+								language={language}
+								filter={filterData}
+								date={date}
+								category={category}
+								priceRange={priceRange}
+								keyword={keyword}
+								typeShop={typeShop}
+								setDate={setDate}
+								setCategory={setCategory}
+								setPriceRange={setPriceRange}
+								setTypeShop={setTypeShop}
+								setKeyword={setKeyword}
+							/>
+							<div className="d-flex flex-wrap justify-content-between productsOption mb-4">
+								<div className="mb-3 mb-lg-0">
+									<Button
+										variant="primary"
+										onClick={() => changeToQuick()}
+										className={`me-2 me-lg-3 fw-bold ${
+											stateButton === "quick"
+												? "bg primary-bg bordered"
+												: "text-dark transparent-bg border-0"
+										}`}
+									>
+										{t("quick_booking")}
+									</Button>
+									{/* <Button
                 variant={stateButton === "request" ? "primary" : "secondary"}
                 onClick={() => changeToRequest()}
                 className="fw-bold me-2 me-lg-3"
               >
                 {t("request_book")}
               </Button> */}
-							<Button
-								variant="primary"
-								onClick={() => changeToMap()}
-								className={`fw-bold ${
-									stateButton === "map"
-										? "bg nara-season bordered"
-										: "text-dark bg-transparent border-0"
-								}`}
+									<Button
+										variant="primary"
+										onClick={() => changeToMap()}
+										className={`fw-bold ${
+											stateButton === "map"
+												? "bg primary-bg bordered"
+												: "text-dark bg-transparent border-0"
+										}`}
+									>
+										{t("map")}
+									</Button>
+								</div>
+								<div className="d-flex sort">
+									<div className="text">{t("sort_by")}:</div>
+									<Form.Select
+										value={selectedOption}
+										onChange={(e) => onSort(e.target.value)}
+									>
+										{options.map((o) => (
+											<option key={o.value} value={o.value}>
+												{o.label}
+											</option>
+										))}
+									</Form.Select>
+								</div>
+							</div>
+							<div
+								className="bg primary-bg w-100 mb-3"
+								style={{ height: "3px" }}
+							></div>
+							<div
+								className="productItems"
+								style={{ display: stateButton !== "map" ? "block" : "none" }}
 							>
-								{t("map")}
-							</Button>
-						</div>
-						<div className="d-flex sort">
-							<div className="text">{t("sort_by")}:</div>
-							<Form.Select
-								value={selectedOption}
-								onChange={(e) => onSort(e.target.value)}
+								<Items
+									services={services}
+									goToDetail={goToDetail}
+									loadMore={loadMore}
+									totalPage={totalPage}
+									currentPage={page}
+									currentPageOnRequest={pageRequest}
+									totalPageOnRequest={totalPageOnRequest}
+									state={stateButton}
+								/>
+							</div>
+							<div
+								className="productsMap"
+								style={{ display: stateButton === "map" ? "block" : "none" }}
 							>
-								{options.map((o) => (
-									<option key={o.value} value={o.value}>
-										{o.label}
-									</option>
-								))}
-							</Form.Select>
+								{geocodes && stateServices.length > 0 && (
+									<Map positions={stateServices} zoom={9} />
+								)}
+							</div>
 						</div>
-					</div>
-					<div
-						className="bg nara-season w-100 mb-3"
-						style={{ height: "3px" }}
-					></div>
-					<div
-						className="productItems"
-						style={{ display: stateButton !== "map" ? "block" : "none" }}
-					>
-						<Items
-							services={services}
-							goToDetail={goToDetail}
-							loadMore={loadMore}
-							totalPage={totalPage}
-							currentPage={page}
-							currentPageOnRequest={pageRequest}
-							totalPageOnRequest={totalPageOnRequest}
-							state={stateButton}
-						/>
-					</div>
-					<div
-						className="productsMap"
-						style={{ display: stateButton === "map" ? "block" : "none" }}
-					>
-						{geocodes && stateServices.length > 0 && (
-							<Map positions={stateServices} zoom={9} />
-						)}
-					</div>
-				</div>
 
-				<div className="skeletonWrapper" style={{ display: skeletonShow }}>
-					<SkeletonProducts currentPage={page} />
+						<div className="skeletonWrapper" style={{ display: skeletonShow }}>
+							<SkeletonProducts currentPage={page} />
+						</div>
+					</div>
+					<div className="ads-container col-md-3 col-12 d-none d-md-block">
+						<Ads />
+					</div>
 				</div>
 			</div>
 		</div>

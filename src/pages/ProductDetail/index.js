@@ -302,7 +302,7 @@ const ProductDetail = () => {
 							style={{ display: detailShow ? "block" : "none" }}
 						>
 							<div className="serviceType w-100">{getServiceType()}</div>
-							<h2 className="title mb-5 font nara-season">{service.Name}</h2>
+							<h2 className="title mb-5">{service.Name}</h2>
 							<div className="carousel">
 								{service.Images !== null ? (
 									<Slider {...settings}>

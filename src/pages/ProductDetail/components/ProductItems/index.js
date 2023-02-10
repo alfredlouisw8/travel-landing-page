@@ -497,7 +497,7 @@ const ProductItems = ({
 								{booking.Configurations[0].Quotes ? (
 									<Button
 										variant="primary"
-										className="secondary-bg"
+										className="primary-bg"
 										onClick={() => submitBooking(booking)}
 									>
 										{onRequest === "true"

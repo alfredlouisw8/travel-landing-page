@@ -17,9 +17,6 @@
 	}
 
 	.product {
-		border: 8px solid var(--primary);
-		border-radius: 0 0 1.25rem 1.25rem;
-
 		.skeletonWrapper {
 			padding: 2rem;
 		}
@@ -175,10 +172,8 @@
 			.sectionTitle {
 				border-bottom: 3px solid var(--primary);
 				margin-bottom: 1rem;
-				color: #fff;
 
 				span {
-					background: var(--primary);
 					padding: 0.5rem 3rem;
 					padding-left: 1rem;
 					display: inline-block;

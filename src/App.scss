@@ -1,3 +1,9 @@
+html {
+	--primary: #036;
+	--text-color: #036;
+	--border-color: #036;
+}
+
 @import "~bootstrap/scss/bootstrap";
 @import "./assets/styles/variables";
 @import "./assets/styles/global";
@@ -57,90 +63,86 @@ a {
 	}
 }
 
-body#spring {
-	--primary: linear-gradient(
-		to right,
-		rgba(179, 52, 133, 1) 0%,
-		rgba(144, 33, 100, 1) 100%
-	);
-	--text-color: #8b2360;
-	--border-color: #902164;
-}
-body#summer {
-	--primary: linear-gradient(
-		to right,
-		rgba(224, 63, 63, 1) 0%,
-		rgba(204, 43, 43, 1) 100%
-	);
-	--text-color: #cc2b2b;
-	--border-color: #cc2b2b;
-}
-body#autumn {
-	--primary: linear-gradient(
-		to right,
-		rgba(215, 87, 48, 1) 0%,
-		rgba(185, 70, 36, 1) 100%
-	);
-	--text-color: #d75730;
-	--border-color: #b94624;
-}
-body#winter {
-	--primary: linear-gradient(
-		to right,
-		rgba(135, 90, 164, 1) 0%,
-		rgba(90, 61, 109, 1) 100%
-	);
-	--text-color: #5a3d6d;
-	--border-color: #5a3d6d;
+ul {
+	padding-left: 0 !important;
+	margin-bottom: 0;
 }
 
-/* Seasons Color */
-
-.bg.nara-season {
-	background: var(--primary);
-	color: white;
+p {
+	margin-bottom: 0;
 }
 
-.secondary-bg {
-	background-color: $secondary;
-	border-color: $secondary;
-	outline: none;
-	box-shadow: none;
+.js-modal__bg {
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.js-modal__main {
+	width: 260px;
+	height: 90px;
+	margin-left: -150px;
+	padding: 20px;
+	top: 30%;
+	left: 50%;
+	background: #fff;
+	border-radius: 5px;
+	position: absolute;
+}
+.js-modal__btn {
+	cursor: pointer;
+	padding-top: 31px;
+}
+.js-modal__btn small {
+	font-size: 12px;
+}
 
-	&:hover,
-	&:focus,
-	&:active {
-		background-color: $secondary;
-		border-color: $secondary;
-		outline: none;
-		box-shadow: none;
+.js-modal__btn--close {
+	width: 30px;
+	height: 30px;
+	background: #333;
+	border-radius: 50%;
+	position: absolute;
+	top: -10px;
+	right: -6px;
+	z-index: 101;
+	cursor: pointer;
+}
+.js-modal__btn--close:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-right: 2px solid #fff;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 12px;
+	left: -3px;
+}
+.js-modal__btn--close:after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -2px;
+	left: -3px;
+}
+
+div:after {
+	display: none;
+}
+
+.primary-bg {
+	background-color: var(--primary) !important;
+	border-color: var(--primary) !important;
+	background: none;
+	color: #fff;
+	&:hover {
+		background-color: var(--primary) !important;
 	}
-}
-
-.bg-before.nara-season:before {
-	background: var(--primary);
-	color: white;
-}
-
-.font.nara-season {
-	color: var(--text-color);
-}
-
-.bordered.nara-season {
-	border-color: var(--border-color);
-}
-
-.breadcrumb {
-	margin-bottom: 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.breadcrumb a {
-	text-decoration: none;
-}
-
-.breadcrumb .separator {
-	margin: 0px 10px;
 }

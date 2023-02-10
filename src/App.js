@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import moment from "moment";
 import "moment/locale/ja";
 
-//import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 //import Navigation from "./components/Navigation";
 import Cart from "./components/Cart";
 
@@ -13,6 +13,10 @@ import "./App.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./pages/Products/components/LanguageSelector";
+import Header from "./components/Header";
+import MobileHeader from "./components/MobileHeader";
+import { isMobile } from "./helpers/utils";
+import MobileFooter from "./components/MobileFooter";
 
 function App() {
 	const [language, setLanguage] = useState("jp");
@@ -42,32 +46,19 @@ function App() {
 	};
 
 	return (
-		<div className="App my-4">
-			<div className="container">
-				{/* <div className="content">
-					<button
-						className={`btn ${language === "en" ? "active" : ""}`}
-						value="en"
-						onClick={handleOnclick}
-					>
-						English
-					</button>
-					<button
-						className={`btn ${language === "jp" ? "active" : ""}`}
-						value="jp"
-						onClick={handleOnclick}
-					>
-						日本語
-					</button>
-				</div> */}
-				<div className="breadcrumb w-100">
+		<div className="App">
+			{isMobile ? <MobileHeader /> : <Header />}
+			<div className="container my-3">
+				<div className="d-flex justify-content-between align-items-center w-100">
 					<div>
-						<a href="https://yamatoji.nara-kankou.or.jp/">{t("home")}</a>
-						<span className="separator">|</span>
+						<a href="https://www.welcome.city.yokohama.jp/">{t("home")}</a>
+						<span className="separator mx-3">|</span>
+						<a href="https://www.welcome.city.yokohama.jp/hotel">{t("hotel")}</a>
+						<span className="separator mx-3">|</span>
 						<span>{t("list")}</span>
 						{idParams && (
 							<>
-								<span className="separator">|</span>
+								<span className="separator mx-3">|</span>
 								<span>{t("details")}</span>
 							</>
 						)}
@@ -80,6 +71,7 @@ function App() {
 			<Outlet context={[language]} />
 			<Cart language={language} />
 			<ToastContainer />
+			{isMobile ? <MobileFooter /> : <Footer />}
 		</div>
 	);
 }

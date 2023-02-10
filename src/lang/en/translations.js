@@ -1,5 +1,6 @@
 export const TRANSLATIONS_EN = {
 	search: "Search",
+	search_title: "Search",
 	booking: "Booking",
 	not_found:
 		"Sorry, there are no products to display. Please revisit this page again soon. 😉",
@@ -15,6 +16,7 @@ export const TRANSLATIONS_EN = {
 	map: "Map",
 	details: "Details",
 	home: "Home",
+	hotel: "Hotel",
 	list: "List",
 	name: "Name",
 	address: "Address",

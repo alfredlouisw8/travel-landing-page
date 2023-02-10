@@ -175,7 +175,7 @@ const Cart = () => {
 					)}
 					{!isEmpty && (
 						<div
-							className="btn btn-primary bg nara-season bordered w-100 mb-3 fw-bold"
+							className="btn btn-primary bg primary-bg bordered w-100 mb-3 fw-bold"
 							onClick={() => goToCABS()}
 						>
 							<FontAwesomeIcon icon={faCheck} />
